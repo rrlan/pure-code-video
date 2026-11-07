@@ -1,0 +1,38 @@
+name: Sync Upstream Video Styles
+
+on:
+  schedule:
+    # Runs automatically every Monday at 02:00 UTC (10:00 Beijing Time)
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pure-code-video
+        uses: actions/checkout@v4
+
+      - name: Clone upstream community repositories
+        run: |
+          git clone --depth 1 https://github.com/HiAPIAI/awesome-opus-5-5-video-styles.git /tmp/opus55
+          git clone --depth 1 https://github.com/lemomo-ai/lemo-opuscar.git /tmp/lemo-opuscar
+
+      - name: Run incremental style & case sync
+        run: |
+          python3 scripts/sync_upstream.py --opus-dir /tmp/opus55 --lemo-dir /tmp/lemo-opuscar
+
+      - name: Commit and push if new styles found
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add recipes/ assets/ index.html
+            git commit -m "chore(sync): auto-sync new upstream pure-code video styles"
+            git push origin main
+          else
+            echo "No new upstream styles found."
+          fi
