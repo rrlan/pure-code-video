@@ -502,7 +502,9 @@ function openModal(item, isCore) {
     : `/* 画风锁定配方 */\n${item.recipe}\n\n/* 原作完整 Prompt */\n${item.prompt}`;
   document.getElementById('m-prompt').textContent = fullRecipe;
 
-  const orderCmd = `请用【${item.title_zh}（风格ID: ${item.id}）】画风帮我做一条纯代码视频，主题是：`;
+  const orderCmd = isCore
+    ? `请按以下纯代码视频风格配方（零生图大模型，纯代码逐帧确定性渲染）帮我制作一条视频：\n\n【目标画风】${item.title_zh} (${item.title_en}) [ID: ${item.id}]\n【视觉特征】${item.desc}\n【风格配方】\n${item.recipe}\n\n【我要做的视频主题与时长】：`
+    : `请参考以下 Opus 5.5 纯代码动画案例画风帮我制作一条新视频：\n\n【参考案例】${item.title_zh} [ID: ${item.id} · ${item.style_zh}]\n【画风配方】\n${item.recipe}\n【原作 Prompt 参考】\n${item.prompt}\n\n【我要做的视频主题与时长】：`;
   document.getElementById('m-copy-order').onclick = () => copyText(orderCmd, `✓ 已复制【${item.title_zh}】点单口令！`);
   document.getElementById('m-copy-prompt').onclick = () => copyText(fullRecipe, '✓ 已复制完整风格配方 / Prompt！');
 
@@ -567,7 +569,16 @@ function renderGrid() {
       card.querySelector('.media-wrap').onclick = () => openModal(item, true);
       card.querySelector('.detail-btn').onclick = () => openModal(item, true);
       card.querySelector('.order-btn').onclick = () => {
-        const cmd = `请用【${item.title_zh}（风格ID: ${item.id}）】画风帮我做一条纯代码视频，主题是：`;
+        const cmd = `请按以下纯代码视频风格配方（零生图大模型，纯 HTML5 Canvas/SVG/CSS/WebGL 代码逐帧确定性渲染）帮我制作一条视频：
+
+【目标画风】${item.title_zh} (${item.title_en}) [风格ID: ${item.id}]
+【视觉特征】${item.desc}
+【风格配方与约束】
+${item.recipe}
+【工程要求】
+1. 严禁调用外部生图模型或引用外部图片文件，所有图形、材质、动效与转场均用纯代码实现；
+2. 暴露 window.__setTime(t) 虚拟时钟接口（供 Playwright 60fps 逐帧截取），并提供可播放预览与 WebAudio/TTS 音轨合成；
+3. 我要做的视频主题与时长是：`;
         copyText(cmd, `✓ 已复制【${item.title_zh}】点单口令！`);
       };
       grid.appendChild(card);
@@ -610,7 +621,14 @@ function renderGrid() {
       card.querySelector('.media-wrap').onclick = () => openModal(item, false);
       card.querySelector('.detail-btn').onclick = () => openModal(item, false);
       card.querySelector('.order-btn').onclick = () => {
-        const cmd = `请参考【${item.title_zh}（案例ID: ${item.id}，画风: ${item.style_zh}）】帮我做一条纯代码视频，主题是：`;
+        const cmd = `请参考以下 Opus 5.5 纯代码动画实测案例的画风与实现方式（零生图大模型，纯代码渲染），帮我制作一条新视频：
+
+【参考案例】${item.title_zh} [案例ID: ${item.id} · 分类: ${item.style_zh}]
+【画风锁定配方】
+${item.recipe}
+【原作实现 Prompt 参考】
+${item.prompt}
+【我要做的新视频主题与时长】：`;
         copyText(cmd, `✓ 已复制【${item.title_zh}】点单口令！`);
       };
       grid.appendChild(card);

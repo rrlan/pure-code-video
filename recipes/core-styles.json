@@ -1,0 +1,2043 @@
+[
+  {
+    "id": "argon-high-energy",
+    "title_zh": "高能节拍快剪 + 3D 体素矩阵",
+    "title_en": "High-Energy Beat-Locked Promo",
+    "library": "Pure-Code 原创实测样片",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "video",
+    "media_url": "./assets/demos/pure-code-demo-15s.mp4",
+    "poster_url": "./assets/demos/pure-code-demo-poster.jpg",
+    "desc": "128 BPM 严格锁拍，7 幕图形衔接转场（火花→激光线→全屏洪水→遮罩大字→二阶阻尼弹簧/3D网格/48kHz频谱→121柱3D体素波→编译器UI→奇点尾卡），含 WebAudio 合成音轨。",
+    "recipe": "Style: high-energy 128 BPM promo.\n- Timing: 128 BPM (1 beat = 0.46875s), 60fps virtual-clock Playwright capture.\n- Transitions: Every scene cut is carried by a geometric object (flood fill, detached period dot, iris portal).\n- Typography: Heavy Grotesk + Italic Serif + Monospace HUD viewfinder.\n- Motion: Closed-form second-order damped springs + 3D canvas voxel projection.",
+    "source_ref": "templates/high-energy-html/pure-code-demo-15s.html",
+    "tags": [
+      "128BPM",
+      "60FPS",
+      "3D体素",
+      "动态排版",
+      "WebAudio合成"
+    ]
+  },
+  {
+    "id": "claude-textured-editorial",
+    "title_zh": "手绘水彩绘本科普（带配音+词级字幕）",
+    "title_en": "Textured-Editorial Storybook Explainer",
+    "library": "Pure-Code 原创实测样片",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "video",
+    "media_url": "./assets/demos/handdrawn-leafcutter-21s.mp4",
+    "poster_url": "./assets/demos/handdrawn-leafcutter-poster.jpg",
+    "desc": "水彩纸纹底 + 蓝色画师结构线 → 毛笔墨线 → 水彩晕染（Pen.wash）+ 地下蚁穴剖面（nestCanvas）+ 中文神经语音配音 + 逐词卡拉 OK 高亮双语字幕。",
+    "recipe": "Style: textured-editorial storybook illustration (claude-animation).\n- Surface: Warm watercolour paper grain (#F6EFE2) with subtle vignette.\n- 3-Phase Drawing: Blue pencil construction guides -> tapered brush ink -> blooming watercolour wash.\n- Audio & Captions: edge-tts zh-CN-YunxiNeural + WordBoundary word-level karaoke pill captions.\n- Framing: 12fps character twos + underground cross-section viewport.",
+    "source_ref": "templates/handdrawn-explainer/handdrawn-leafcutter-21s.mjs",
+    "tags": [
+      "手绘水彩",
+      "中文配音",
+      "词级字幕",
+      "生物科普",
+      "剖面图解"
+    ]
+  },
+  {
+    "id": "mg-05-cel-boil",
+    "title_zh": "逐帧手绘 / 线条沸腾",
+    "title_en": "Cel Boil Hand-Made",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/mg15/05-cel-boil.webp",
+    "poster_url": "./assets/mg15/05-cel-boil.webp",
+    "desc": "米白纸底手绘墨线，每数帧轻微重绘（Line Boil），手作温度感极强。",
+    "recipe": "# 逐帧手绘 / 线条沸腾 Cel Animation / Frame-by-Frame & Line Boil\n\n**原片**：手作 HAND MADE · 1920×1080 · 24 fps · 10 秒 · AI 评审终评 8.07 / 10\n\n**源码**：[demos/05-cel-boil/](../demos/05-cel-boil/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n逐帧手绘 / 线条沸腾 Cel Animation / Frame-by-Frame & Line Boil\n\n# Output (fixed)\n- 1920×1080, 24 fps, exactly 10.000 s (240 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak",
+    "source_ref": "mg-styles-15/prompts/05-cel-boil.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "05-cel-boil"
+    ]
+  },
+  {
+    "id": "mg-03-isometric",
+    "title_zh": "等轴 2.5D 城市生长",
+    "title_en": "Isometric 2.5D World",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/mg15/03-isometric.webp",
+    "poster_url": "./assets/mg15/03-isometric.webp",
+    "desc": "等轴测 2.5D 模块化建筑与系统生长，适合架构、城市与平台生态演示。",
+    "recipe": "# 等轴 2.5D Isometric / 2.5D\n\n**原片**：ISOPOLIS「让城市自己生长」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 8.00 / 10\n\n**源码**：[demos/03-isometric/](../demos/03-isometric/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n等轴 2.5D Isometric / 2.5D\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final file: video.mp4.\n\n# Suggested techn",
+    "source_ref": "mg-styles-15/prompts/03-isometric.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "03-isometric"
+    ]
+  },
+  {
+    "id": "mg-01-flat-vector",
+    "title_zh": "扁平矢量几何（一圆变万物）",
+    "title_en": "Flat Vector Motion",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/mg15/01-flat-vector.webp",
+    "poster_url": "./assets/mg15/01-flat-vector.webp",
+    "desc": "纯粹几何图形通过弹簧缓动与无缝遮罩变形串联全片。",
+    "recipe": "# 扁平矢量动画 Flat / Vector 2D Motion Graphics\n\n**原片**：popwise「One Dot」一个点的一镜到底 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.64 / 10\n\n**源码**：[demos/01-flat-vector/](../demos/01-flat-vector/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n扁平矢量动画 Flat / Vector 2D Motion Graphics\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP.",
+    "source_ref": "mg-styles-15/prompts/01-flat-vector.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "01-flat-vector"
+    ]
+  },
+  {
+    "id": "mg-02-line-art",
+    "title_zh": "一笔画连续线条动画",
+    "title_en": "Atelier Linea One-Line",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/mg15/02-line-art.webp",
+    "poster_url": "./assets/mg15/02-line-art.webp",
+    "desc": "一根不断开的流体线条在空间中勾勒主体与转场，优雅克制。",
+    "recipe": "# 线条动画 Line Art / Line Animation\n\n**原片**：ATELIER LINEA「一笔画 One Line」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.64 / 10\n\n**源码**：[demos/02-line-art/](../demos/02-line-art/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n线条动画 Line Art / Line Animation\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final file: video.mp4",
+    "source_ref": "mg-styles-15/prompts/02-line-art.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "02-line-art"
+    ]
+  },
+  {
+    "id": "mg-04-3d-render",
+    "title_zh": "3D 软体物理着陆",
+    "title_en": "Soft 3D Render",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/mg15/04-3d-render.webp",
+    "poster_url": "./assets/mg15/04-3d-render.webp",
+    "desc": "C4D / Blender 柔光材质、软体碰撞与细腻环境光遮蔽。",
+    "recipe": "# 3D 渲染系（C4D/Blender 质感） 3D Render / CGI Motion Design\n\n**原片**：soft.「Soft Landing 柔软着陆」 · 1920×1080 · 24 fps · 10 秒 · AI 评审终评 7.71 / 10\n\n**源码**：[demos/04-3d-render/](../demos/04-3d-render/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg；这种风格建议的路线要用 Blender。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n3D 渲染系（C4D/Blender 质感） 3D Render / CGI Motion Design\n\n# Output (fixed)\n- 1920×1080, 24 fps, exactly 10.000 s (240 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −1",
+    "source_ref": "mg-styles-15/prompts/04-3d-render.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "04-3d-render"
+    ]
+  },
+  {
+    "id": "mg-08-morph",
+    "title_zh": "一形万象连续形变",
+    "title_en": "Continuous Morph",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/mg15/08-morph.webp",
+    "poster_url": "./assets/mg15/08-morph.webp",
+    "desc": "前一个物体的轮廓直接拉伸变形为下一个物体，零硬切一镜到底。",
+    "recipe": "# 形变动画 Morphing / Shape Morph\n\n**原片**：一形万象 One Shape, Every Story · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.64 / 10\n\n**源码**：[demos/08-morph/](../demos/08-morph/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n形变动画 Morphing / Shape Morph\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final file: video.mp4.\n\n# Suggest",
+    "source_ref": "mg-styles-15/prompts/08-morph.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "08-morph"
+    ]
+  },
+  {
+    "id": "mg-19-paperclip",
+    "title_zh": "粗描边贴纸人硬核科普 MG",
+    "title_en": "Paperclip Sticker Explainer",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/mg15/19-paperclip.webp",
+    "poster_url": "./assets/mg15/19-paperclip.webp",
+    "desc": "回形针/贴纸风粗黑描边配高对比色块与数据拆解，极适合硬核科普。",
+    "recipe": "# 粗描边贴纸人科普 MG（回形针/林超风格） Bold-outline Sticker Explainer MG (PaperClip / Lin Chao style)\n\n**原片**：一部手机里，藏着多少种元素？ 70/118 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.71 / 10\n\n**源码**：[demos/19-paperclip/](../demos/19-paperclip/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n粗描边贴纸人科普 MG（回形针/林超风格） Bold-outline Sticker Explainer MG (PaperClip / Lin Chao style)\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with",
+    "source_ref": "mg-styles-15/prompts/19-paperclip.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "19-paperclip"
+    ]
+  },
+  {
+    "id": "mg-22-hud",
+    "title_zh": "赛博朋克战术 HUD / FUI",
+    "title_en": "Cyberpunk HUD / FUI",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/mg15/22-hud.webp",
+    "poster_url": "./assets/mg15/22-hud.webp",
+    "desc": "高密度雷达准星、遥测扫描框、等宽字体跳数与锁定告警动效。",
+    "recipe": "# 赛博朋克 HUD / FUI Cyberpunk HUD / FUI (Fictional UI)\n\n**原片**：隼眼-9 · 目标锁定 KESTREL-9 TARGET ACQUIRED · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.93 / 10\n\n**源码**：[demos/22-hud/](../demos/22-hud/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n赛博朋克 HUD / FUI Cyberpunk HUD / FUI (Fictional UI)\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true",
+    "source_ref": "mg-styles-15/prompts/22-hud.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "22-hud"
+    ]
+  },
+  {
+    "id": "mg-06-collage",
+    "title_zh": "复古杂志剪报拼贴",
+    "title_en": "Editorial Zine Collage",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/mg15/06-collage.webp",
+    "poster_url": "./assets/mg15/06-collage.webp",
+    "desc": "撕边纸片、半调网点照片、胶带贴纸与 12fps 定格抽帧节奏。",
+    "recipe": "# 拼贴剪贴 Collage / Cutout Animation\n\n**原片**：NOGGIN 脑洞季刊「脑洞大开 The Mind Is a Collage」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 8.14 / 10\n\n**源码**：[demos/06-collage/](../demos/06-collage/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n拼贴剪贴 Collage / Cutout Animation\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final fil",
+    "source_ref": "mg-styles-15/prompts/06-collage.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "06-collage"
+    ]
+  },
+  {
+    "id": "mg-12-aurora-glass",
+    "title_zh": "弥散极光 + 玻璃拟态",
+    "title_en": "Aurora Glassmorphism",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/mg15/12-aurora-glass.webp",
+    "poster_url": "./assets/mg15/12-aurora-glass.webp",
+    "desc": "流动极光流体背景叠加高折射毛玻璃 UI 卡片与柔光边框。",
+    "recipe": "# 弥散渐变 / 玻璃拟态 Gradient Blur (Aurora) & Glassmorphism\n\n**原片**：Aurora — think in light「思考，自有光」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 8.07 / 10\n\n**源码**：[demos/12-aurora-glass/](../demos/12-aurora-glass/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n弥散渐变 / 玻璃拟态 Gradient Blur (Aurora) & Glassmorphism\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  in",
+    "source_ref": "mg-styles-15/prompts/12-aurora-glass.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "12-aurora-glass"
+    ]
+  },
+  {
+    "id": "mg-09-bauhaus",
+    "title_zh": "包豪斯几何节奏构成",
+    "title_en": "Bauhaus Konstruktion",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/mg15/09-bauhaus.webp",
+    "poster_url": "./assets/mg15/09-bauhaus.webp",
+    "desc": "红黄蓝黑米白五色纯几何构成，严格踩点旋转与网格分割。",
+    "recipe": "# 几何构成 / 包豪斯 Geometric / Bauhaus Motion\n\n**原片**：KONSTRUKTION · 20 SCHLÄGE「二十拍构成」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.71 / 10\n\n**源码**：[demos/09-bauhaus/](../demos/09-bauhaus/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n几何构成 / 包豪斯 Geometric / Bauhaus Motion\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Fina",
+    "source_ref": "mg-styles-15/prompts/09-bauhaus.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "09-bauhaus"
+    ]
+  },
+  {
+    "id": "mg-10-synthwave",
+    "title_zh": "80s 复古霓虹夜驰 / VHS",
+    "title_en": "80s Synthwave VHS",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/mg15/10-synthwave.webp",
+    "poster_url": "./assets/mg15/10-synthwave.webp",
+    "desc": "透视霓虹网格、落日横条、色差分离与 VHS 磁带扫描线质感。",
+    "recipe": "# 复古系（80s Synthwave / Y2K 千禧） Retro: 80s Synthwave / VHS / Y2K\n\n**原片**：NEON DRIVE · Midnight「霓虹夜驰 1986」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 8.21 / 10\n\n**源码**：[demos/10-synthwave/](../demos/10-synthwave/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n复古系（80s Synthwave / Y2K 千禧） Retro: 80s Synthwave / VHS / Y2K\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered t",
+    "source_ref": "mg-styles-15/prompts/10-synthwave.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "10-synthwave"
+    ]
+  },
+  {
+    "id": "mg-20-pixel",
+    "title_zh": "复古像素冒险",
+    "title_en": "Pixel Quest 8-Bit",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/mg15/20-pixel.webp",
+    "poster_url": "./assets/mg15/20-pixel.webp",
+    "desc": "整数倍放大像素画布、离散帧精灵动画与 8-bit 芯片音乐。",
+    "recipe": "# 像素风 Pixel Art / 8-bit\n\n**原片**：PIXEL QUEST 像素冒险 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 8.07 / 10\n\n**源码**：[demos/20-pixel/](../demos/20-pixel/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n像素风 Pixel Art / 8-bit\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final file: video.mp4.\n\n# Suggested technical route\nHTML",
+    "source_ref": "mg-styles-15/prompts/20-pixel.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "20-pixel"
+    ]
+  },
+  {
+    "id": "mg-07-liquid",
+    "title_zh": "液态水滴融合流动",
+    "title_en": "Liquid Metaball Flow",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/mg15/07-liquid.webp",
+    "poster_url": "./assets/mg15/07-liquid.webp",
+    "desc": "基于粘性表面张力（Metaball）的液态融合、滴落与波纹扩散。",
+    "recipe": "# 液态流动 Liquid Motion\n\n**原片**：drop.「万物始于一滴」 · 1920×1080 · 30 fps · 10 秒 · AI 评审终评 7.57 / 10\n\n**源码**：[demos/07-liquid/](../demos/07-liquid/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n液态流动 Liquid Motion\n\n# Output (fixed)\n- 1920×1080, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final file: video.mp4.\n\n# Suggested technical route\nHTML WebGL2",
+    "source_ref": "mg-styles-15/prompts/07-liquid.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "07-liquid"
+    ]
+  },
+  {
+    "id": "mg-18-hanazi",
+    "title_zh": "9:16 竖屏高能综艺花字",
+    "title_en": "9:16 Variety Show Hanazi",
+    "library": "Opus 5.5 十五种 MG 风格 (mg-styles-15)",
+    "category": "口播与竖屏包装",
+    "media_type": "image",
+    "media_url": "./assets/mg15/18-hanazi.webp",
+    "poster_url": "./assets/mg15/18-hanazi.webp",
+    "desc": "高饱和多层描边爆款花字、弹性砸入与贴纸气泡，适合短视频口播。",
+    "recipe": "# 综艺花字 Variety Show Kinetic Captions (Hanazi)\n\n**原片**：喵呜日记 EP.07「今日份快乐」 · 1080×1920 · 30 fps · 10 秒 · AI 评审终评 7.64 / 10\n\n**源码**：[demos/18-hanazi/](../demos/18-hanazi/)\n\n## 怎么用\n\n1. 新建一个空文件夹，在里面打开一个能写代码、能执行命令的 AI 助手（例如 Claude Code）。本机需要能跑网页渲染（Node + Chrome）和 ffmpeg。\n2. 把下面「提示词」整段复制进去发送。\n3. 想换成自己的内容：改 `Creative seed` 里的故事、品牌名、文案和配色，或者改 `Output` 里的尺寸（比如竖屏 1080×1920）。不要删 `Signature features` 那一段，它是这种风格被一眼认出来的依据。\n4. 想再提高：成片出来后，另开一个 AI 用 [rubric.md](../rubric.md) 评审，把评审意见贴回给制作的 AI 再改一轮。原片就是这样改了两轮。\n\n## 提示词\n\n```text\nYou are the director, motion designer, engineer and sound designer of ONE 10-second motion-design film.\nThe goal is the most classic, yet most stunning form of this style — award-shortlist / high-end commercial quality. A clean,\ntemplate-looking result is a fail. Benchmarks: Buck, ManvsMachine, Ordinary Folk, Giant Ant, Territory Studio, Apple keynote\nmotion, Pentagram motion identities, top Behance/Motionographer features, top 抖音/B站 designer accounts.\n\n# Style\n综艺花字 Variety Show Kinetic Captions (Hanazi)\n\n# Output (fixed)\n- 1080×1920, 30 fps, exactly 10.000 s (300 frames), H.264 MP4 with stereo AAC audio (48 kHz), mastered to −14 LUFS\n  integrated, true peak ≤ −1 dBTP. Final fil",
+    "source_ref": "mg-styles-15/prompts/18-hanazi.md",
+    "tags": [
+      "Opus 5.5",
+      "动态WebP预览",
+      "含完整配方",
+      "18-hanazi"
+    ]
+  },
+  {
+    "id": "grammar-y1_kurzgesagt",
+    "title_zh": "Kurzgesagt 发光扁平科普",
+    "title_en": "Kurzgesagt Flat Cosmos",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/grammars/y1_kurzgesagt.jpg",
+    "poster_url": "./assets/grammars/y1_kurzgesagt.jpg",
+    "desc": "把抽象概念画成发光扁平世界里的具体物件，相机在对数尺度间无缝缩放穿行。",
+    "recipe": "# Y1 · Kurzgesagt 扁平科普：视频动画语法卡\n\n一句话：把一个抽象概念画成一个具体的物，放进能无限缩放的发光世界里，相机在尺度之间穿行；环境层（星、粒子）可以一直轻轻动，主体和信息在口播节点上发生变化，落定后停住。\n\n示范片：`scripts/engine/demos/y1_kurzgesagt/`（渲染 `render.py --film demos/y1_kurzgesagt`）（8s，3 镜 2 转场），总览：`assets/动画语法/y1_kurzgesagt_总览.jpg`\n依据：本风格的调研（调研原文与逐帧数据留在实验归档、没收进 skill，用到的数字已摘进本卡）（2025 两支正片＋2014《免疫系统》实测，官方 Skillshare 课逐字稿）。标【实测】【一手】的数字出自那里，标【本片】的是示范片里实际用的参数。\n\n## 起手必查\n\n1. **先写这一段的视觉隐喻：抽象概念画成什么物**（细胞、齿轮、管道、城市、一滴水……）。写不出物的那一句，不要只放一颗发光的球加几个标签胶囊。\n2. **示范片和样例里的橙色中心星球是一种画法，不是这个语法的签名。** 中心物按题材换形状和颜色。参数化片段 y1 的中心物由 spec 定：`data.center_style`（颜色、形状、要不要轨道环）或 `data.image`（把一张真实图片裁进中心物），不写就按名字生成一个中性样式，不再是那颗橙色星球。它只会画「中心物＋卫星节点」，适合「里面有什么」的分层讲法；题材不是这个结构，就自己写镜头（`demos/y1_kurzgesagt/` 和 `lib/` 的 `CAM`、`TOON`），或换语法。\n3. **每句旁白里至少一次状态变化**（弹出、形变、钻入、拉远）。逐句数一遍：连续两句画面没变，就补一个事件，不靠浮动和慢推凑。\n4. **主体落定后停住。** 环境层（星闪、粒子漂、远景云）可以一直轻轻动；主体和标签不加浮动、呼吸，不用匀速慢推填停顿。\n5. **钻进去之前先停一下。** 尺度转场前让要钻的那个物停 0.3 秒以上、亮起来，观众知道下一步进的是哪一个；缩放用对数插值（`CAM.zlerp`）。\n\n---\n\n## ① 适用场景\n\n**用它：**\n- 讲尺度、讲「里面是什么」的内容：从细胞到星系、从一个像素到一个模型，或者「放大看会发现……」。尺度转场是这个风格的标配。\n- 讲机制、讲系统：神经网络、免疫系统、能量流。最适合把看不见的过程画成发光的粒子和连线。\n- 口播是平稳、娓娓道来的科普腔。Kurzgesagt 约 168 词/分，一个硬切镜头大约配 2 句话【实测】。\n- 需要「严肃但可爱」的语气，可以用一个吉祥物或鸟群出来讲笑点。\n\n**别用它：**\n- 讲真实人物、真实事件、档案证据：扁平卡通会把可信度冲淡，这",
+    "source_ref": "huashu-art-motion/references/动画语法/y1_kurzgesagt.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "y1_kurzgesagt"
+    ]
+  },
+  {
+    "id": "grammar-y2_vox",
+    "title_zh": "Vox 调查记者档案桌面",
+    "title_en": "Vox Investigation Collage",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/grammars/y2_vox.jpg",
+    "poster_url": "./assets/grammars/y2_vox.jpg",
+    "desc": "真实截图、文献剪报摆在调查桌面上，相机平移推进，12fps 荧光笔一顿一顿划重点。",
+    "recipe": "# Y2 · Vox 式拼贴解说：视频动画语法卡\n\n一句话：把论证摆在一张有真实材料的桌面上——剪报、照片、文件，相机像调查记者的眼睛在桌上移动；线和笔一顿一顿地画上去，证据感来自「这些东西是真的被放在这里的」。\n\n示范片：`scripts/engine/demos/y2_vox/`（渲染 `render.py --film demos/y2_vox`）（8s，3 镜 2 转场），总览：`assets/动画语法/y2_vox_总览.jpg`\n依据：本风格的调研（调研原文与逐帧数据留在实验归档、没收进 skill，用到的数字已摘进本卡）。样本 5 支：Missing Chapter（2022）、迷幻海报（2019）、Vox Borders（2018）、Johnny Harris（2026），另有 Vox 2026 实拍片作对照。13 段相机运动拟合了缓动，取了色。\n\n## 起手必查\n\n1. **真实材料当主画面。** 截图、原文、照片铺满或接近铺满，推近到要读的那一句；桌面是相机穿行的世界，不是给小图垫的底色。量一下：素材宽不到画宽 60% 的镜头连续超过 2 个，就是「相框版式」。\n2. **「滑入→打字标签→红圈」要轮换。** 分镜时列一张揭示动作表：直接在（随切点出现）、推近、横移到下一张、荧光笔扫、红线连、盖章、撕下……同一套揭示序列连用不超过 3 次。证据：一支长片 37 个标签里有 36 次滑入，到中段观众已经能预判下一步。\n3. **要读的字放在最上层、最后画，** 不跟所属物件的层级走。照片、夹子、后放上来的卡盖住字，是这个语法最常复发的穿帮。\n4. **相机落点按这一刻要读的东西反算**（框住目标再留边），不手填坐标；半截入画的邻卡标签推出画外。\n5. **累积桌面每放一张新卡，把同屏的字按阅读顺序连读一遍。** 两张卡的字挨在一起会拼成一句错话（「超过」贴着「收购」），撤卡或把限定词写全。\n6. **同一事件的正式动作只演一次。** 全景示意里演过的动作，推近后不再重演，否则读成「又发生了一次」。\n\n---\n\n## ① 适用场景\n\n**用它：**\n- 有真实档案、新闻、历史、地图、人物的内容：「这件事是怎么发生的」「谁在什么时候说了什么」。\n- 口播是记者式的论证：引用、证据、因果。旁白里有「看这一句」「注意这个数字」，画面就去高亮那一句。\n- 引一句原话、一组数字、一个年份，需要观众「亲眼看到出处」的时刻。\n- 示范片用 2012 年 Google「认猫」论文的真实数字：1000 台机器、1.6 万个 CPU 核、1000 万张 YouTube 截图、不打标签。出处是 arXiv:1112.6209 与 Google 官方博客。\n\n**别用它：**\n- 纯机制、纯概念、没有任何真实材料可贴的内容。硬做会变成「假档案」，用 Y1。\n- 推导",
+    "source_ref": "huashu-art-motion/references/动画语法/y2_vox.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "y2_vox"
+    ]
+  },
+  {
+    "id": "grammar-y3_whiteboard",
+    "title_zh": "RSA 大白板边讲边画",
+    "title_en": "RSA Whiteboard Reasoning",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/grammars/y3_whiteboard.jpg",
+    "poster_url": "./assets/grammars/y3_whiteboard.jpg",
+    "desc": "说一句写一句，相机跟着推理链在大白板上平移，收尾拉远呈现完整逻辑全景图。",
+    "recipe": "# Y3 · 白板手绘解说（RSA Animate 型）：视频动画语法卡\n\n一句话：讲者说一句，手就在一张大白板上写一句、画一个图；相机跟着论证在板上移动，最后拉远，观众看到整场论证是一张图。\n\n示范片：`scripts/engine/demos/y3_whiteboard/`（渲染 `render.py --film demos/y3_whiteboard`）（8s，3 镜，转场 2 种＋收尾拉远），总览：`assets/动画语法/y3_whiteboard_总览.jpg`\n依据：本风格的调研（调研原文与逐帧数据留在实验归档、没收进 skill，用到的数字已摘进本卡）。实测了 RSA Animate《Changing Education Paradigms》和 Minute Physics《Why is it Dark at Night?》，还查了 VideoScribe、Doodly 的官方文档和 Andrew Park、Henry Reich 的一手说法。\n\n**先选一种语法，不能混**：\n- RSA 型：一整块大白板，相机在板上移动，每分钟 5.3 次。\n- Minute Physics 型：一页一张纸，硬切换纸，每分钟 8.1 次，相机不动。\n- 本卡和示范片走 RSA 型。Minute Physics 型的要点写在 ④ 和 ⑧ 里。\n\n## 起手必查\n\n1. **画少写多是分镜层的问题，先定视觉隐喻再动笔。** 每块板先写下要画的那个物或笑点，再定写什么字；手写整句不超过一行。数一数：板书和同时刻口播原文重合的字超过一半，就是画少写多，后期补双关、加图标救不回来。\n2. **块式模板要轮换。** 「年份 → 物件 → 橙标签」或「圆点 → 一行字 → 一个图标」这类同结构的块，全片连用不超过 3 次；换成对比（左右两幅）、流程（箭头串起来）、放大细节、一整幅大图。\n3. **取景不手填相机坐标。** 用本段笔画的外框反算（框住再留边），画框边上被裁成半截的旧字推出画外。\n4. **线型从第一笔定死。** 实线＝已发生，虚线＝计划，点线＝跨段引线；板上的东西只能擦掉或留着，不渐隐。\n5. **每个物件的造型过一遍「会不会被看成不雅形状」。** 圆头、两侧外翻、圆底的竖长物最容易出事，改成尖头、平底再画。\n\n---\n\n## ① 适用场景\n\n**用它：**\n- 论证型内容：演讲、观点、因果链、历史脉络。概念之间有关系、能画成一张地图的内容最合适。Andrew Park 的原话是「把信息摆在空间里，让人看见事物之间的关系」【一手】。\n- 一条推理链的短科普，走 Minute Physics 型。\n- 口播语速平稳，关键词清楚。RSA 的写字速度大约等于语速，像「字幕被手写出来」【实测】。\n\n**别用它：**\n- 需要精确数据图表的内容，手绘误差大。\n-",
+    "source_ref": "huashu-art-motion/references/动画语法/y3_whiteboard.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "y3_whiteboard"
+    ]
+  },
+  {
+    "id": "grammar-y4_storytime",
+    "title_zh": "第一人称简笔表情包叙事",
+    "title_en": "Storytime Reaction Toon",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "口播与竖屏包装",
+    "media_type": "image",
+    "media_url": "./assets/grammars/y4_storytime.jpg",
+    "poster_url": "./assets/grammars/y4_storytime.jpg",
+    "desc": "口播是主角，角色姿势 0.1s 快切挤压回弹，笑点切反应特写定格。",
+    "recipe": "# y4 · 故事型简笔角色动画（YouTube storytime animation）\n\n> 一句话语法：**口播是主角，画面是给口播配的「表情包」——角色在几个姿势之间快切（0.1 秒）然后定住，笑点靠切到反应大特写、并在那一下里闭嘴。**\n\n代表：TheOdd1sOut（James Rallison）、Jaiden Animations、Domics。工具：据 Jaiden 的 FAQ 和二手资料，三人早期都用 Flash / Adobe Animate（这条没拿到一手原文，只作背景）。\n\n---\n\n## ① 适用场景\n\n**用它：**\n- 第一人称讲经历、讲翻车、讲「我第一次……」：口播有起承转合、有一个能停顿的笑点。\n- 观众要的是「这个人」：创作者的卡通化身每期出现，认的是人设不是画工（Pappis 的类型研究：化身之间「往往只靠发型就能区分」）。\n- 预算有限、要稳定周更：一个角色、五六个姿势、三张嘴就能撑满一期。\n\n**别用：**\n- 信息密度高的教程、数据讲解 → 用 y5 动态文字或信息图。观众会盯着角色等笑点，记不住数字。\n- 没有「我」的内容（行业新闻、产品对比）→ 角色没有立场可表演，就只剩一个会张嘴的贴图。\n- 口播本身不好笑、没停顿 → 这个风格把口播放大，不会替口播救场。\n\n## ② 画面构成\n\n**构图**\n- 中景（腰以上，头占画高 25–35%）是默认机位，角色居中偏一侧，另一侧留给「他在说的东西」（电脑、对方、物件）。\n- 背景只交代「在哪」：一面墙、一张桌、一扇窗，3–5 个大色块。白底或纯色底也完全成立（Pappis：「白底或者一个粗糙的场景草图」）。\n- 反应镜头把环境拿掉：脸占满画面（头半径 ≈ 画高 1/3），背景换纯色＋暗角。\n- 笑点镜头经常反着来：切到**大全景**，人变得很小（「渺小无助」本身就是笑点）。\n\n**配色（示范片实际色值）**\n\n| 部位 | 色值 | 说明 |\n|---|---|---|\n| 皮肤 | `#FFE2CC` | 浅、近白——TheOdd1sOut 的「棉花糖人」是纯白，Jaiden 偏暖白 |\n| 帽子 / 白 T | `#FFFFFF`，帽带 `#E4E4E8` | 白色物件靠黑轮廓立住 |\n| 短裤 | `#CDBB97` | |\n| 角色线 | `#1B1B1F` | 全片最黑 |\n| 墙 / 桌 / 地 | `#DCE9EC` / `#E2C29B` / `#E8DCC8` | 低饱和、高明度：背景永远比角色「轻」 |\n| 背景线 | `#5B6470` 3px | 比角色线浅、细一半以上 |\n| 反应镜头虚空 | `#3D405B`＋径向暗角 | 冷、暗，把注意力全压到脸上 |\n| 嘴 / 舌 / 腮红 | `#6E2430` / `#F07B7B` / `rg",
+    "source_ref": "huashu-art-motion/references/动画语法/y4_storytime.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "y4_storytime"
+    ]
+  },
+  {
+    "id": "grammar-y5_kinetic_type",
+    "title_zh": "重音砸词动态大字报",
+    "title_en": "Beat-Slam Kinetic Type",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/grammars/y5_kinetic_type.jpg",
+    "poster_url": "./assets/grammars/y5_kinetic_type.jpg",
+    "desc": "字就是演员，关键词踩重音砸入，画面永远只有一个视觉焦点。",
+    "recipe": "# y5 · 动态文字排版 / 信息图动效（kinetic typography）\n\n> 一句话语法：**字就是演员——每个关键词踩一个重音砸进来，主词大到一眼读完，其余的字从「槽」里升起给耳朵对位；画面里永远只有一个焦点，镜头和底纹一直在动，字落定后不动。**\n\n血统：Saul Bass《North by Northwest》（1959）片头被普遍认作第一次在长片里大规模用动态文字；2008 年后 YouTube 上的歌词/台词 kinetic type（After Effects 一代）把它变成解说视频、清单、语录、数据开场的标准语法。\n\n## 起手必查\n\n1. **先确认这段该让字当主角。** 只有清单、金句、数字、章节卡时用；整段超过 30–60 秒全是字，就换语法，或者每 2 页插一页图、证据物（截图、代码卡、聊天气泡）。\n2. **数字数。** 主词 ≤4 个字，辅句 ≤14 字；同一时刻只有一个东西在入场。超了就拆页，不缩字号硬塞。\n3. **同一页型连续不超过 3 页。** 「大字＋辅句＋左上标签」连翻 4 页就是幻灯片；中间插一页数字砸入、一页证据物，或一次冲进色块的转场。\n4. **每个落点写成拍号或口播里的词。** 不在节拍网格、也不对词的落点，删掉或挪上去。\n5. **字落定后不动。** 动感交给拍点微冲、换页、证据物入场，主词不漂、不呼吸。\n\n---\n\n## ① 适用场景\n\n**用它：**\n- 解说/清单/「X 个阶段」「3 个理由」类的开场与章节卡：信息是**结构**（几个、哪一个、从什么到什么），不是画面。\n- 语录、金句、一句话结论：让观众「看着读」比「听着记」更牢。\n- 数字讲解：一个数字一个镜头，数字本身做主角。\n- 口播里有明确的重音词（「不是写代码，是**说需求**」）。\n\n**别用：**\n- 讲故事、讲情绪起伏 → 没有人脸，观众很难共情（用 y4 角色）。\n- 长段解释性口播配满屏字 → 观众只会读不会听，读也跟不上。整片超过 30–60 秒全是动态字会累，用它做开场、章节卡、结论卡就好。\n- 字很多的列表（>5 条）→ 改成静态信息图慢慢讲。\n\n## ② 画面构成\n\n**构图**：一屏一个主词。主词左对齐压在画面左侧 1/3–1/2（或镜像到右侧），辅句紧贴主词下方，另一侧放一个「证据物」（代码卡、聊天气泡、清单）。上角放小标签（「阶段 01」）和进度轨。四周至少留 130px 边距。\n\n**字号阶梯（示范片）**：主词 340px（普惠体 115 Black）：辅句 96px（105 Heavy）：标签 40px（85 Bold，字距 6px）≈ **3.4 : 1 : 0.4**。主词要在 0.3 秒里被读完，所以主词只给 2 个字。\n\n**配色**：每个章节一个整屏底色，换章节＝换底色（色彩本身就是章节号）",
+    "source_ref": "huashu-art-motion/references/动画语法/y5_kinetic_type.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "y5_kinetic_type"
+    ]
+  },
+  {
+    "id": "grammar-t1_3b1b",
+    "title_zh": "3Blue1Brown 连续形变推导",
+    "title_en": "3Blue1Brown Math Transform",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/grammars/t1_3b1b.jpg",
+    "poster_url": "./assets/grammars/t1_3b1b.jpg",
+    "desc": "纯黑底聚焦唯一数学/算法对象，用连续几何变换把上一个公式直接变成下一个。",
+    "recipe": "# t1_3b1b · 3Blue1Brown 式数学／概念可视化\n\n> 一句话语法：**黑底上只放「正在讲的那一个东西」，用平滑形变（Transform）把上一个概念直接变成下一个，颜色＝概念的名字，全片几乎不切。**\n>\n> 示范片：`scripts/engine/demos/t1_3b1b/`（渲染 `render.py --film demos/t1_3b1b`）（8s，3 镜头）· 总览 `assets/动画语法/t1_3b1b_总览.jpg` · 代码 `scripts/engine/demos/t1_3b1b/`\n\n## 起手必查\n\n1. **每个镜头写出「谁变成谁」。** 上一个对象和下一个对象各是什么（方格 → 圆、一条曲线 → 另一条、像素 → 神经元）。写不出变形对象的那一句，不用 t1，换 y5 或 y3。\n2. **第一帧就是对象。** 坐标系、方格、曲线先出来，标题和公式后到；不要第 0 秒先 Write 一行标题。\n3. **数屏上的字。** 同一时刻屏上要点不超过 2 条；第三条出来前，前面的要么变成图、要么收走。要点一条条 Write 成列表，就是黑底的 PPT。\n4. **颜色表先写好。** 每个概念一个颜色，公式里的符号和画面里的对象同色；全片语义色不超过 4 种。\n5. **wait 时静止。** 不加匀速慢推、呼吸、漂浮；镜头只在要看下一个对象时动，动完就停（见 ③「相机」）。\n\n## ① 适用场景\n\n- **用**：讲一个机制「怎么一步步变成另一个东西」——神经网络前向传播、注意力、矩阵变换、梯度下降、概率分布、算法流程。口播是「我们把这张图压平成一列」「每个像素乘上一个权重」这种**动作型句子**时最合适：每句话对应一次 Transform。\n- **用**：观众需要「看见数学」——公式里的符号与画面里的物体一一对应（公式的 W 是蓝色，连线也是蓝色）。\n- **别用**：产品发布、情绪/品牌片（黑底白线太冷、太慢）；数据真实走势（那是 t3 的活）；口播是观点、故事、金句时（没有可以「变形」的对象，硬上只剩装饰）。8 秒以内的快剪也不合适——3b1b 的原生节奏是一个动画 1–3 秒＋停 1 秒（见⑤），压到 8 秒 3 个镜头已经是上限。\n\n## ② 画面构成\n\n| 项 | 取值 | 依据 |\n|---|---|---|\n| 背景 | **纯黑 #000000** | Grant 自己的 `custom_config.yml`。网上流传的「深海军蓝 #0E1525」是营销博客的说法，不是原作 |\n| 饱和度 | 色值照 manim 常量，再整体 **×1.5 饱和**（`DG.saturate`） | Grant 导出时 ffmpeg `saturation=1.5`；照原值用会发灰 |\n| 主色（原值→×1",
+    "source_ref": "huashu-art-motion/references/动画语法/t1_3b1b.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "t1_3b1b"
+    ]
+  },
+  {
+    "id": "grammar-t2_keynote_ui",
+    "title_zh": "Apple 发布会界面推镜",
+    "title_en": "Keynote UI Spotlight",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/grammars/t2_keynote_ui.jpg",
+    "poster_url": "./assets/grammars/t2_keynote_ui.jpg",
+    "desc": "一屏一件事，产品真实界面当主角并平滑推近，核心指标在说到时落定。",
+    "recipe": "# t2_keynote_ui · 发布会式界面与渐变动效\n\n> 一句话语法：**一屏一件事，产品本身（截图、录屏、实物）当主角，名词和数字在口播说到时落定；字收紧，弹簧无回弹或轻回弹。** 光斑渐变底、毛玻璃卡、渐变字、居中模糊浮现、装饰漂浮都是可选包装，慎用（见「起手必查」）。\n>\n> 示范片：`scripts/engine/demos/t2_keynote_ui/`（渲染 `render.py --film demos/t2_keynote_ui`）（8s，3 镜头）· 总览 `assets/动画语法/t2_keynote_ui_总览.jpg` · 代码 `scripts/engine/demos/t2_keynote_ui/`\n\n## 起手必查\n\n1. **这一套最容易读成 AI 模板。** 光斑渐变底＋毛玻璃卡＋渐变字＋居中从模糊里浮出＋卡片漂浮，五样一起上，观众一眼认出是模板。开工前先问：有没有真实的产品截图、录屏、实物照片？有，就让它满幅当主画面并推近到要讲的那一块，光斑和玻璃卡不用；五样包装一支片子最多挑两样。\n2. **截图要大。** 有截图的镜头，截图宽度 ≥ 画宽 80%（竖屏 ≥ 90%），口播讲到截图里看不清的那一块时再推近过去（默认缓推约 0.9 秒；那一块是揭晓、对比结果时才快推 0.28 秒）。一张截图最多推一两次，推进去之后拉回整张或横移到下一块。一张小卡漂在大片光斑上，就是第四种做坏方式「死背景」。参数化片段 t2 默认就是这样：截图满幅铺开（等比不裁，四周垫同图的压暗模糊版），highlight 那一刻推过去（默认缓推，spec 顶层的 `data` 里写 `\"camera\": \"snap\"` 才快推），连着两张截图之间同倍率横移；旧的玻璃卡要显式写 `data.frame: \"glass\"`。自己写镜头用 `CAM.track`（镜头动作表）和 `MD.cover`（满幅＋焦点＋推近），动作怎么选见 `../镜头语言.md`。\n3. **数版式。** 把分镜里每一屏的版式写出来（标题屏、三卡并排、大数字、截图卡），同一种连续出现 ≥2 屏就换一种：截图推近、数字砸入、前后对比。「标题 → 三张功能卡 → 大数字」整片循环，就是翻页 PPT。\n4. **落定后停住。** 不加卡片漂浮、不用匀速慢推填停顿；下一个动作放在口播说到名词或数字的那一刻。数字讲的是刚才那张截图里的事（两次计时之比、这一页的结论），number 写 `data.over: true`：镜头拉回整张截图、截图压暗、数字砸在上面，不切到光斑底单独一屏。\n5. **配色跟产品走。** 底色和强调色取产品自己的品牌色，不默认紫蓝青光斑；讲坏消息、严肃事件、非发布题材时不用这套深色发布会底。\n\n## ① 适用场景\n\n- **用**：产品/功能发布、版本更新、",
+    "source_ref": "huashu-art-motion/references/动画语法/t2_keynote_ui.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "t2_keynote_ui"
+    ]
+  },
+  {
+    "id": "grammar-t3_finance_chart",
+    "title_zh": "严谨财经数据生长图表",
+    "title_en": "Honest Finance Chart",
+    "library": "花叔 8 大解说动画语法 (huashu)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/grammars/t3_finance_chart.jpg",
+    "poster_url": "./assets/grammars/t3_finance_chart.jpg",
+    "desc": "先搭诚实坐标系，再让折线/柱体随时间长出，最后只高亮一个关键拐点。",
+    "recipe": "# t3_finance_chart · 财经数据图表动画\n\n> 一句话语法：**先搭坐标系、再让数据「长」出来、最后只标一件事；一个颜色讲主角、其余变灰；数值永远诚实（柱从 0 起、单位和来源写在图上），动画只决定「怎么出现」，不改变「是多少」。**\n>\n> 示范片：`scripts/engine/demos/t3_finance_chart/`（渲染 `render.py --film demos/t3_finance_chart`）（8s，3 镜头，数据全部虚构，每镜右下角「示意数据」）· 总览 `assets/动画语法/t3_finance_chart_总览.jpg` · 代码 `scripts/engine/demos/t3_finance_chart/`\n\n## 起手必查\n\n1. **每张图先写出它的那「一件事」。** 标题就是这句结论，标注只标它；写不出这一句的图不做，改用一个大数字或换语法。\n2. **数字口径能互推。** 标题里的倍数要能从图上的数算出来（a ÷ b 写在标注里）；两镜之间的同一个数必须对得上；「涨到」和「涨了」分清。\n3. **数据长出的时刻对口播里那个词。** 柱状图写多个 bar cue，各带 `data.index`，让每根柱子在说到它时才长；不要第 0 秒先出标题、再一口气全长完。\n4. **落定后停住。** 数字落定后至少停 0.5 秒，不加匀速慢推；要看局部就在口播点到那里时缓推过去（约 1 秒，Heer & Robertson：一步约 1s、缓入缓出），最关键的那个数才快推 0.28 秒；或用 `zoomThrough` 推进到那个点。\n5. **同一版式不连用 3 张以上。** 细红线＋标题＋图连续 3 张就是翻报表；中间插一次推进到局部、一个砸入的大数字，或切回真实素材。\n6. **图表留在片子的世界里。** 图表镜头的底和前后镜头同色系：深色片写 `theme: \"dark\"`，或者把片子的底色写进 `safe.fill`（图表底自动跟它，深色换浅字）；白底报表只用在本来就是白纸、网页的片子里。更好的是把图表画在片子世界里的物上：`--alpha` 出透明片段，贴到画里的屏幕、黑板、一张纸上。夜景片里突然切一张白底折线图、顶上一行固定标题，审片会说「和全片断开」。\n\n## ① 适用场景\n\n- **用**：营收/利润/用户数的增长、股价走势、市场份额排名变化（bar chart race）、地区对比（地图着色）、某个事件前后的拐点。口播里出现**具体数字、时间、比较**（「五年涨了 8.7 倍」「2023 年 3 月之后」）时。\n- **用**：需要「可信」的段落——观众会截图转发、会较真。\n- **别用**：只有一个数（直接大字报，用 t2 的计数）；数据本身不可靠或你不愿标来源时（宁可不做图）；讲原理",
+    "source_ref": "huashu-art-motion/references/动画语法/t3_finance_chart.md",
+    "tags": [
+      "口播解说语法",
+      "叙事分镜",
+      "t3_finance_chart"
+    ]
+  },
+  {
+    "id": "art-09_postimp",
+    "title_zh": "梵高流场厚涂笔触",
+    "title_en": "Van Gogh Flow-Field Impasto",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/art/clawd-vangogh.gif",
+    "poster_url": "./assets/art/clawd-vangogh.gif",
+    "desc": "三遍流场笔触 + 区域色板 + 星空漩涡灯晕摇曳，艺术感极强。",
+    "recipe": "Art Style 09_postimp (Van Gogh Flow-Field Impasto): 三遍流场笔触 + 区域色板 + 星空漩涡灯晕摇曳，艺术感极强。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (09_postimp)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "09_postimp"
+    ]
+  },
+  {
+    "id": "art-28_monet",
+    "title_zh": "莫奈睡莲短笔触水影",
+    "title_en": "Monet Waterlily Shimmer",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/art/monet.gif",
+    "poster_url": "./assets/art/monet.gif",
+    "desc": "粉彩短笔触水面倒影、光斑颤动与涟漪扩散。",
+    "recipe": "Art Style 28_monet (Monet Waterlily Shimmer): 粉彩短笔触水面倒影、光斑颤动与涟漪扩散。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (28_monet)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "28_monet"
+    ]
+  },
+  {
+    "id": "art-02_egypt",
+    "title_zh": "古埃及墓室壁画与象形字",
+    "title_en": "Ancient Egyptian Mural",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "东方与古典艺术",
+    "media_type": "image",
+    "media_url": "./assets/art/egypt.gif",
+    "poster_url": "./assets/art/egypt.gif",
+    "desc": "侧脸正面眼程式、平涂细勾线、圣甲虫推日与象形字逐笔书写。",
+    "recipe": "Art Style 02_egypt (Ancient Egyptian Mural): 侧脸正面眼程式、平涂细勾线、圣甲虫推日与象形字逐笔书写。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (02_egypt)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "02_egypt"
+    ]
+  },
+  {
+    "id": "art-14_8bit",
+    "title_zh": "8-Bit 横版闯关像素",
+    "title_en": "8-Bit Retro Platformer",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/art/mario-combo.gif",
+    "poster_url": "./assets/art/mario-combo.gif",
+    "desc": "240×135 逐像素绘制、HUD 心闪、顶砖块金币与击中停顿（Hit-stop）。",
+    "recipe": "Art Style 14_8bit (8-Bit Retro Platformer): 240×135 逐像素绘制、HUD 心闪、顶砖块金币与击中停顿（Hit-stop）。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (14_8bit)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "14_8bit"
+    ]
+  },
+  {
+    "id": "art-25_ghibli",
+    "title_zh": "晨光水彩洗染绘本",
+    "title_en": "Dawn Watercolour Wash",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/art/clawd-dawn.gif",
+    "poster_url": "./assets/art/clawd-dawn.gif",
+    "desc": "透明叠色水彩洗染 + 水痕边缘 + 晨光丁达尔光束。",
+    "recipe": "Art Style 25_ghibli (Dawn Watercolour Wash): 透明叠色水彩洗染 + 水痕边缘 + 晨光丁达尔光束。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (25_ghibli)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "25_ghibli"
+    ]
+  },
+  {
+    "id": "art-01_sketch",
+    "title_zh": "动态速写角色表演",
+    "title_en": "Expressive Line Character",
+    "library": "花叔 36 种名画与艺术渲染器",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/art/clawd-trex.gif",
+    "poster_url": "./assets/art/clawd-trex.gif",
+    "desc": "富有弹性的手绘角色关节表演与地面扬尘。",
+    "recipe": "Art Style 01_sketch (Expressive Line Character): 富有弹性的手绘角色关节表演与地面扬尘。\nCanvas 2D procedural brush / pixel renderer with deterministic frame stepping.",
+    "source_ref": "huashu-art-motion/references/风格配方 (01_sketch)",
+    "tags": [
+      "GIF动图预览",
+      "艺术画风",
+      "01_sketch"
+    ]
+  },
+  {
+    "id": "dashi-notes",
+    "title_zh": "手帐荧光笔手绘笔记",
+    "title_en": "Hand-Drawn Study Notes",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-notes.jpg",
+    "poster_url": "./assets/dashi/dashi-notes.jpg",
+    "desc": "米黄方格纸底、手写体关键词、荧光笔划重点与手绘小图标。",
+    "recipe": "米黄方格纸底、手写体关键词、荧光笔划重点与手绘小图标。",
+    "source_ref": "dashi-animationstyle/styles/手绘笔记/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "手绘笔记"
+    ]
+  },
+  {
+    "id": "dashi-flowchart",
+    "title_zh": "现代扁平机制流程图",
+    "title_en": "Clean Flat Flowchart",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-flowchart.jpg",
+    "poster_url": "./assets/dashi/dashi-flowchart.jpg",
+    "desc": "清晰节点卡片、动态连线生长与步骤高亮，适合讲清复杂业务链路。",
+    "recipe": "清晰节点卡片、动态连线生长与步骤高亮，适合讲清复杂业务链路。",
+    "source_ref": "dashi-animationstyle/styles/扁平流程图/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "扁平流程图"
+    ]
+  },
+  {
+    "id": "dashi-newspaper",
+    "title_zh": "复古头版报刊排版",
+    "title_en": "Vintage Newspaper Press",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-newspaper.jpg",
+    "poster_url": "./assets/dashi/dashi-newspaper.jpg",
+    "desc": "旧报纸纸纹、衬线大标题、分栏版式与网点插图。",
+    "recipe": "旧报纸纸纹、衬线大标题、分栏版式与网点插图。",
+    "source_ref": "dashi-animationstyle/styles/复古报刊/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "复古报刊"
+    ]
+  },
+  {
+    "id": "dashi-papercut",
+    "title_zh": "手工肌理复古剪纸",
+    "title_en": "Textured Paper Cutout",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-papercut.jpg",
+    "poster_url": "./assets/dashi/dashi-papercut.jpg",
+    "desc": "多层彩色卡纸叠落、柔和纸片投影与定格位移。",
+    "recipe": "多层彩色卡纸叠落、柔和纸片投影与定格位移。",
+    "source_ref": "dashi-animationstyle/styles/复古剪纸/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "复古剪纸"
+    ]
+  },
+  {
+    "id": "dashi-collage",
+    "title_zh": "超现实波普图像拼贴",
+    "title_en": "Surreal Pop Collage",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-collage.jpg",
+    "poster_url": "./assets/dashi/dashi-collage.jpg",
+    "desc": "大胆撞色底、跨时代雕像/器物剪切拼贴与荒诞幽默感。",
+    "recipe": "大胆撞色底、跨时代雕像/器物剪切拼贴与荒诞幽默感。",
+    "source_ref": "dashi-animationstyle/styles/超现实拼贴/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "超现实拼贴"
+    ]
+  },
+  {
+    "id": "dashi-3dtoon",
+    "title_zh": "3D 膨胀立体卡通",
+    "title_en": "Inflated 3D Toon",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-3dtoon.jpg",
+    "poster_url": "./assets/dashi/dashi-3dtoon.jpg",
+    "desc": "圆润高光立体色块、柔和体积阴影与Q弹缩放。",
+    "recipe": "圆润高光立体色块、柔和体积阴影与Q弹缩放。",
+    "source_ref": "dashi-animationstyle/styles/立体卡通/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "立体卡通"
+    ]
+  },
+  {
+    "id": "dashi-darktech",
+    "title_zh": "暗黑微光科技看板",
+    "title_en": "Dark Tech Dashboard",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-darktech.jpg",
+    "poster_url": "./assets/dashi/dashi-darktech.jpg",
+    "desc": "深邃暗底、微光边框卡片、流光连线与大字核心指标。",
+    "recipe": "深邃暗底、微光边框卡片、流光连线与大字核心指标。",
+    "source_ref": "dashi-animationstyle/styles/黑底科技/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "黑底科技"
+    ]
+  },
+  {
+    "id": "dashi-cyberneon",
+    "title_zh": "高对比赛博霓虹故障",
+    "title_en": "Cyberpunk Neon Glitch",
+    "library": "大师中文口播长视频风格 (dashi)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/dashi/dashi-cyberneon.jpg",
+    "poster_url": "./assets/dashi/dashi-cyberneon.jpg",
+    "desc": "赛博洋红/青色辉光、扫描网格与数字故障切镜。",
+    "recipe": "赛博洋红/青色辉光、扫描网格与数字故障切镜。",
+    "source_ref": "dashi-animationstyle/styles/霓虹赛博/风格指南.md",
+    "tags": [
+      "中文口播长视频",
+      "含色彩字体规范",
+      "霓虹赛博"
+    ]
+  },
+  {
+    "id": "opuscar-archive-lighttable",
+    "title_zh": "档案灯台 (Archive Light Table)",
+    "title_en": "Archive Light Table",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/archive-lighttable.jpg",
+    "poster_url": "./assets/lemo/archive-lighttable.jpg",
+    "desc": "【实证影像 · 样片《Two Seconds Short》】电报说最长飞了 57 秒；放大镜下，莱特兄弟的底片和档案说是 59 秒。",
+    "recipe": "适用场景：Brand history, Archive stories, Museums\n\n# Archive Light Table — Style Prompt\n\n> Real archive objects (glass negatives, slides, letters, telegrams, clippings, drawings) lie on a cool, backlit light table. A loupe comes down on one of them, and inside the glass the object comes alive: a negative turns positive, a line of type lights up, a number lifts off the page, a photograph opens into depth. Precise catalogue numbers, dates and readings are pinned to the objects. Clean, modern and quiet, with no vintage filter.\n> References (grammar only): archive documentaries that push into still photographs; visual investigations that annotate real imagery (one line, one reading, one source per screen); product macro films (glass edges, transmitted light). Copy none of their layouts, typefaces, shots or music, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The objects are real**: scans of public-domain or licensed archive items, at their true proportions, with their real damage (broken corners, emulsion edges, folds, pencil marks). Nothing in them is drawn or generated.\n- **Light comes from below**: the table glows a near-white cool grey; film and glass transmit it, paper glows warm at its edges, opaque thi",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/archive-lighttable/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "archive-lighttable",
+      "Brand history",
+      "Archive stories"
+    ]
+  },
+  {
+    "id": "opuscar-art-deco",
+    "title_zh": "装饰艺术 (Art Deco)",
+    "title_en": "Art Deco",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/art-deco.jpg",
+    "poster_url": "./assets/lemo/art-deco.jpg",
+    "desc": "【图形与排版 · 样片《Midnight at the Starlight Hotel》】1930 年的大饭店，门童赶在午夜前把一封信送上顶楼。",
+    "recipe": "适用场景：Luxury & hospitality, Galas, Invitations\n\n# Art Deco — Style Prompt\n\n> Black lacquer, engraved gold line and airbrushed geometry: a 1930s poster that moves. Every composition has a centre axis, transitions open or close along it, and light arrives as bulbs switching on one by one.\n> References (grammar only): **A. M. Cassandre** posters (giant geometry, steep perspective, airbrush inside hard edges); **Chrysler Building / Rockefeller Center ornament** (setbacks, sunbursts, chevrons); **Busby Berkeley** overhead numbers overheads (human kaleidoscopes); **The Great Gatsby (2013) title sequence** (gold line drawing itself on black); **Gershwin-era symphonic jazz** (clarinet, piano, muted trumpet). Never copy a poster layout, a real building, a character, a typeface design or a melody.\n\n## 1. Essence, and what it is not\n\nA world built from **gold keylines on warm black**, filled with **airbrushed hard-edged volumes** (Cassandre, Lempicka), organised around **one vertical axis**. Ornament *is* the picture: sunbursts are backgrounds, stepped arches are frames, a dial is a progress bar, a bulb marquee is a reveal. Motion is **mechanical and symmetrical**: things unfold from the centre, doors split along the seam, lights switch on",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/art-deco/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "art-deco",
+      "Luxury & hospitality",
+      "Galas"
+    ]
+  },
+  {
+    "id": "opuscar-ascii-crt",
+    "title_zh": "ASCII / CRT 终端 (ASCII / CRT Terminal)",
+    "title_en": "ASCII / CRT Terminal",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/ascii-crt.jpg",
+    "poster_url": "./assets/lemo/ascii-crt.jpg",
+    "desc": "【图形与排版 · 样片《Tranquility.log》】月球基地的 AI 沉睡 40 年后被唤醒，用字符画出“家”来回复。",
+    "recipe": "适用场景：Developer tools, Sci-fi, Tech brands\n\n# ASCII / CRT Terminal: Style Prompt\n\n> Everything on screen is a real character on a monospace grid, lit by the phosphor of an old monochrome CRT.\n> References (grammar only): 1970s–80s monochrome terminals and teletype logs (typed output, cursor, status lines); ASCII art and demoscene text-mode pictures (images from glyph density); analog-synth film scores of the early 1980s (cold pulse, patient drones). Copy no film's interface text, fonts or logos, and use no real agency names.\n\n## 1. Essence, and what it is not\n\nA single monochrome terminal screen: **P3 amber** (or P1 green) phosphor glowing on dark glass, curved at the edges, with scanlines. Every image, including title, landscape, face, room and subtitles, is made of **real glyphs placed on a character grid** and chosen by ink density. The film has one camera, the screen itself. It moves only by changing the **font size of the grid**: bigger characters push in, smaller characters pull out.\n\nThe mood is cold, patient and machine-calm: typed text, a blinking cursor as suspense, and one warm surprise.\n\n**Never** fake it with an image plus an \"ASCII filter\". Characters must be drawn as characters on a grid. Not a hacker-movie gr",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/ascii-crt/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "ascii-crt",
+      "Developer tools",
+      "Sci-fi"
+    ]
+  },
+  {
+    "id": "opuscar-backrooms",
+    "title_zh": "后室 / 新怪谈 (Liminal Found Footage)",
+    "title_en": "Liminal Found Footage",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/backrooms.jpg",
+    "poster_url": "./assets/lemo/backrooms.jpg",
+    "desc": "【电影与时代 · 样片《Night Shift Orientation》】新夜班员工拍下入职第一晚：无尽的黄色办公空间，和墙上的员工守则。",
+    "recipe": "适用场景：Horror, Mystery & ARG, Game teasers\n\n# Liminal Found Footage — Style Prompt\n\n> Camcorder tapes recovered from empty, endless, fluorescent-lit spaces. Rules instead of monsters.\n> Genre reference (grammar only): \"the Backrooms\" internet folklore and new-weird / rule-horror; 1990s consumer camcorder footage. **Never** use the word \"Backrooms\", wiki \"Level\" numbers, community entity names, or any existing organisation or logo inside the film. Everything on screen (rules, forms, company voice, any presence) is original.\n\nSuits short films; the length follows the walk, and the dread thins out once nothing new goes wrong.\n\n## 1. Essence, and what it is not\n\n- **One first-person camcorder recording** (1990s VHS, 4:3), handheld, continuous.\n- **An empty, familiar-but-wrong interior** that repeats: an office, a hotel floor, a school, a mall, a parking level, a hospital wing. Humming fluorescent light, no people.\n- **Dread from emptiness, repetition, bureaucratic rules, and the camera's own machinery failing at the wrong moment.** Nothing chases anyone. A chill on the back of the neck, not a jump.\n- **The medium is the storyteller**: focus, exposure, tape damage and the on-screen display carry the plot.\n\nNot a horror film (no m",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/backrooms/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "电影与时代",
+      "backrooms",
+      "Horror",
+      "Mystery & ARG"
+    ]
+  },
+  {
+    "id": "opuscar-blueprint",
+    "title_zh": "蓝图 / 工程制图 (Blueprint)",
+    "title_en": "Blueprint",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/blueprint.jpg",
+    "poster_url": "./assets/lemo/blueprint.jpg",
+    "desc": "【图形与排版 · 样片《Patent Pending: The Cloud Catcher》】发明家的蓝图自己画出一台接云机器，修订云线变成了真的雨云。",
+    "recipe": "适用场景：Engineering, Hardware launches, Tech explainers\n\n# Blueprint — Style Prompt\n\n> Engineering drawings that come alive on a sheet of cyanotype paper: white technical line work on Prussian blue, drawn in drafting order, with annotations that move.\n> References (grammar only, never copy): the moving technical drawings in Prologue Films' *Iron Man* (2008) end credits, Leonardo's *Codex Atlanticus* pages, 19th-century US patent drawings (Fig. 1 / Fig. 2, part balloons, fine-line shading), the automaton drawings in *Hugo* (2011). No Marvel elements, no real patents, no real inventor's machine or signature.\n\nSuits films of 30–60 s.\n\n## 1. Essence, and what it is not\n\n- **The whole film happens on one sheet of blueprint paper** lying on a dark drafting table. The camera moves over it like an eye reading a drawing.\n- **White line work on uneven Prussian blue**: centre lines, outlines, hatching, dimension lines, leader lines with numbered balloons, a title block, a notes column.\n- **A 2D line-drawing language**: orthographic and oblique/isometric projection are allowed, **3D rendering never**.\n- **Rigorous convention carries the tone**: the drawing is dry and exact; the notes can carry wit, warmth or gravity.\n- **The designed thing is the ch",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/blueprint/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "blueprint",
+      "Engineering",
+      "Hardware launches"
+    ]
+  },
+  {
+    "id": "opuscar-brick-toy",
+    "title_zh": "积木玩具 (Brick Toy)",
+    "title_en": "Brick Toy",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/brick-toy.jpg",
+    "poster_url": "./assets/lemo/brick-toy.jpg",
+    "desc": "【材质与 3D · 样片《Rocket from Spare Parts》】积木宇航员用零件拼出火箭，飞向积木月亮。",
+    "recipe": "适用场景：Toys & kids, Product builds, Space\n\n# Brick Toy — Style Prompt\n\n> Stop-motion toy-brick films shot like macro photography on a real desk: a world built from interlocking plastic bricks with round studs, animated a pose at a time.\n> References (grammar only): brick-film stop-motion on a tabletop and the \"brick movie\" approach of stepping characters while the camera moves smoothly; macro toy photography (softboxes on glossy plastic, shallow focus, real objects as landscape). Copy none of their characters, sets or music, and never use a brand name.\n\n## 1. Essence, and what it is not\n\nA brick world on a **real surface** (a wooden desk, a kitchen table, a windowsill), shot with a **macro lens** and animated **in stop-motion**. The charm is the tension between the toy world and the real room.\n\nOne-glance traits: glossy ABS with clean rectangular highlights; studs on every top face; seams darkened by contact shadow; real objects out of focus behind; characters that move in held poses on twos.\n\n**Never** use the LEGO name, logo or minifigure silhouette (trademarks). Characters are *built from bricks* (e.g. 1×1 columns for legs, a 2×2 brick for a torso, round bricks for arms, a round 2×2 helmet). Studs carry no lettering.\n\nNo",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/brick-toy/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "brick-toy",
+      "Toys & kids",
+      "Product builds"
+    ]
+  },
+  {
+    "id": "opuscar-briefing-board",
+    "title_zh": "工程简报板 (Engineering Briefing Board)",
+    "title_en": "Engineering Briefing Board",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/briefing-board.jpg",
+    "poster_url": "./assets/lemo/briefing-board.jpg",
+    "desc": "【实证影像 · 样片《The Ship Decides》】一条河要架桥，四种桥型在一面简报墙上逐个受检，拍板的是桥下要过的船。",
+    "recipe": "适用场景：Engineering, Option comparisons, Briefings\n\n# Engineering Briefing Board — Style Prompt\n\n> One real whiteboard wall, filmed: window light on enamel, ghosts of erased marker, frame and tray. Cut-out photographs of real things land on it with weight; tags, magnets, a ruler and stamps are pinned to it; marker ink draws itself in three colours with fixed meanings. The camera rides the lines from fact to fact and only at the end pulls back to show the whole briefing.\n> References (grammar only): explainers filmed on a map wall; the long pull-back over a wall covered in work; drafting conventions (plan above elevation, dimension lines, hatching). Never copy them or name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **A physical board in a room**: enamel, window falloff, a sliding reflection, ghosts of earlier work, frame and tray.\n2. **Real things on it**: cut-out photographs of the real objects, a few millimetres off the board, shadowed by one window, parallaxing. They are evidence: never a generated image presented as a real object.\n3. **Ink that means something**: graphite for names and rules, blue for water and measurement, red only for the decision; rejected ideas erased to ghosts.\n4. **One continuous wall**: no pa",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/briefing-board/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "briefing-board",
+      "Engineering",
+      "Option comparisons"
+    ]
+  },
+  {
+    "id": "opuscar-caption-news",
+    "title_zh": "字幕新闻 (Caption News)",
+    "title_en": "Caption News",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/caption-news.jpg",
+    "poster_url": "./assets/lemo/caption-news.jpg",
+    "desc": "【剪辑与纪实 · 样片《The Bee Ledger》】美国一年死掉 130 万箱蜜蜂，总数却涨了 6%：静音也能看懂的新闻。",
+    "recipe": "适用场景：Social news, Report explainers, Data shorts\n\n# Caption News — Style Prompt\n\n> Social-video news that reads with the sound off. Real footage, photos and the source document are the ground; huge captions are the lead actor, slammed in a chunk at a time with one keyword on a yellow block. Hard cuts on a music grid, numbers that roll, a source tag that slides in whenever a figure appears, and the original document highlighted on screen before its number is believed. 16:9, built for a feed.\n> References (grammar only): the captions-first social news of the mid-2010s (NowThis, AJ+), horizontal explainers that set big type over footage (Bloomberg Quicktake). Never copy their logos, fonts, colour ratios, idents or shots, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **Sound-off first.** Every beat must be understood from the picture and the captions alone; the voice adds pace, not information.\n2. **The caption is the shot.** One Chinese line, set huge, slammed in two or three chunks, one keyword in a yellow block; one English line under it. The footage is chosen to sit under the line.\n3. **Evidence on screen.** Each number arrives with its source: a source tag slides in; key figures are first seen highlighte",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/caption-news/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "caption-news",
+      "Social news",
+      "Report explainers"
+    ]
+  },
+  {
+    "id": "opuscar-cel-anime-80s",
+    "title_zh": "80 年代赛璐璐动画 (80s Cel Anime)",
+    "title_en": "80s Cel Anime",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/lemo/cel-anime-80s.jpg",
+    "poster_url": "./assets/lemo/cel-anime-80s.jpg",
+    "desc": "【卡通与动画 · 样片《City Lights, 1987》】快递少女骑车穿过雨后霓虹都市，赶在黎明发射前送到一盘磁带。",
+    "recipe": "适用场景：Music videos, Game trailers, Nostalgia\n\n# 80s Cel Anime — Style Prompt\n\n> Hand-painted cel animation from the golden age of Japanese OVAs, re-created in code: flat two-tone cels over airbrushed backgrounds, backlit neon, limited-animation timing, played back as a late-80s videotape on a CRT television.\n> References (grammar only): 1980s Japanese OVA and TV cel animation in general (painted-background vs flat-cel contrast, backlit light, held drawings, speed grammar, city-pop openings). Borrow the era's craft, never a specific work's characters, mecha, logos, place names or signature shots.\n\n## 1. Essence, and what it is not\n\nFour layers, and the contrast between them is the look:\n- **Background painting**: soft airbrushed gradients, glowing windows, wet reflections; painted once at load (colour + emissive pair), then only slid.\n- **Cel** (characters, vehicles, props): flat fills, **hard-edged** shadow and highlight shapes, **coloured** outlines, never pure black; stepped at 12 or 8 fps.\n- **Light**: backlit cel (透過光): signs, lamps, title letters glowing *through* the frame; flares, halation.\n- **Playback**: videotape on a CRT: chroma bleed, scanlines, grille, phosphor glow, darkened corners, faint noise.\n\nIf a frame look",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/cel-anime-80s/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "卡通与动画",
+      "cel-anime-80s",
+      "Music videos",
+      "Game trailers"
+    ]
+  },
+  {
+    "id": "opuscar-chalkboard",
+    "title_zh": "黑板粉笔 (Chalkboard)",
+    "title_en": "Chalkboard",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/chalkboard.jpg",
+    "poster_url": "./assets/lemo/chalkboard.jpg",
+    "desc": "【手绘与绘画 · 样片《The Story of Chinese Characters》】粉笔写下网上的说法，再一擦，把「射」写回三千年前。",
+    "recipe": "适用场景：Word origins, Myth-busting, Lessons\n\n# Chalkboard — Style Prompt\n\n> A real classroom blackboard on which chalk writes itself, stroke by stroke in true stroke order, with no hand, no chalk stick and no eraser in sight. One idea is taught the way a teacher does it: write what people think, wipe it with one pass, write what is true in the same place.\n> References (grammar only): a primary-school literacy lesson on a sliding double blackboard; the way a teacher underlines the parts of a character, circles one component and wipes a wrong line. Take the order of a lesson, not any teacher's handwriting.\n\nSuits short lessons on one idea: where a word or a character comes from, a misconception set right, a worked problem. The length follows how many steps the lesson has.\n\n## 1. Essence, and what it is not\n\n- **A clean, freshly wiped board.** One even deep ink green with its own fine grain and very slow mottling. No history on the slate: no old swirls, no ghost lessons, no floating dust, no bokeh.\n- **Writing that grows like a hand writes.** Strokes appear along their centre line in the correct stroke order, with pressure: pressed starts and corners, points that lift, 捺 feet that spread, hooks flicked off.\n- **Three chalks at m",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/chalkboard/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "chalkboard",
+      "Word origins",
+      "Myth-busting"
+    ]
+  },
+  {
+    "id": "opuscar-circuit-board",
+    "title_zh": "电路板 (Circuit Board)",
+    "title_en": "Circuit Board",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/circuit-board.jpg",
+    "poster_url": "./assets/lemo/circuit-board.jpg",
+    "desc": "【信息与发布 · 样片《Seven Milliseconds》】江河变成电路板上的走线，电流从水坝跑 2,080 公里进手机充电器。",
+    "recipe": "适用场景：Energy, Supply chains, Devices\n\n# Circuit Board — Style Prompt\n\n> The subject is drawn as a printed circuit board seen from straight above: the world is copper under green solder mask, routes are traces, places are pads, words are white silkscreen, and what flows (power, water, signals, goods) is light running along the copper. The camera rides that light and jumps between the scale of a map and the scale of a single component.\n> References (grammar only): real PCB design files and assembly drawings (layers, clearances, designators, detail callouts); macro photography of boards (shallow depth of field, gold sheen, soft key light); schematic and single-line diagrams (one symbol stands for one function). Draw your own boards: never copy a real board layout, a logo or a part marking.\n>\n> **Frame rate: 30 fps.** Pass `--fps 30` to `video.mjs` and `30` to `mux.sh`; this overrides the 24 fps in the DIRECTOR.md and TECHNIQUE.md examples.\n\n## 1. Essence, and what it is not\n\n- A top-down board in every frame: copper pour with clearances cut around everything, traces with 0/45/90° runs and mitred corners, gold pads and vias, white monoline silkscreen. Nothing is drawn in perspective.\n- Information moves as light on copper.",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/circuit-board/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "circuit-board",
+      "Energy",
+      "Supply chains"
+    ]
+  },
+  {
+    "id": "opuscar-city-symphony",
+    "title_zh": "延时交响 (Time-lapse Symphony)",
+    "title_en": "Time-lapse Symphony",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/city-symphony.jpg",
+    "poster_url": "./assets/lemo/city-symphony.jpg",
+    "desc": "【剪辑与纪实 · 样片《One Day in New York》】纽约的一天：延时光河、踩着十六分音符的网格，1899 年和今天并排。",
+    "recipe": "适用场景：City films, Music montages, Openers\n\n# Time-lapse Symphony — Style Prompt\n\n> A city film cut like a piece of minimalist music: time-lapse turns traffic, crowds and clouds into rivers of light, the cuts get denser with the score's subdivisions, one thing is slowed almost to a stop, and the film ends on a hard cut to black on a downbeat. No narrator. The music carries it.\n> Grammar learned from the city-symphony tradition and the \"Qatsi\" films (Reggio / Fricke, scores in the Philip Glass manner). Nothing is taken from those films: no footage, no melody, no title lettering, no names in the film.\n\n## 1. Essence, and what it is not\n\n- **An edit style.** The picture is real footage of a place (time-lapse, hyperlapse, aerials, slow motion, archive film, photographs). The style lives in *how time is bent* and *where the cuts fall*, not in a drawn look.\n- **The score is the script.** It is written first, with a clear arc: minimal repetition → acceleration → climax → a sudden stop → acceleration again → hard stop → a quiet coda. Every cut sits on a beat or a subdivision of it.\n- **Machines fast, people slow.** Cars, trains, clouds and light are sped up until they become lines; the one slowed moment is something fragile (a soap",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/city-symphony/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "city-symphony",
+      "City films",
+      "Music montages"
+    ]
+  },
+  {
+    "id": "opuscar-countdown",
+    "title_zh": "实时倒计时分屏 (Live Countdown Split-screen)",
+    "title_en": "Live Countdown Split-screen",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/countdown.jpg",
+    "poster_url": "./assets/lemo/countdown.jpg",
+    "desc": "【剪辑与纪实 · 样片《Counting Itself Down》】阿尔忒弥斯二号发射的最后一分钟，一秒不剪：格子从 1 开到 9，点火合成 1。",
+    "recipe": "适用场景：Launches, Countdowns, Live events\n\n# Live Countdown Split-screen — Style Prompt\n\n> An edit style, not a look. Real footage of one event with a known zero (a launch, a verdict, a final whistle, polls closing), shown in real time: screen time equals event time, a clock ticks every second, and the screen splits into more and more cells as the moment nears, every cell showing the same second. At zero the cells merge into one picture and the clock flips.\n> References (grammar only): the real-time clock and splitting screens of the TV series *24*; the multi-camera archive panels and mission-time codes of the documentary *Apollo 11* (2019). Never copy their type, colours, sounds, graphics or shots, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **Real time.** One continuous stretch of the event, never cut, never re-ordered, never sped up. Slow-motion sources are played back at real speed. The clock and the picture can be checked against each other at any frame.\n2. **The clock is the lead.** It ticks every whole second (sound and a falling digit), it says who is in control, and it changes state at zero.\n3. **Cells show the same second.** Every video cell is synced to the clock, or says plainly that",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/countdown/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "countdown",
+      "Launches",
+      "Countdowns"
+    ]
+  },
+  {
+    "id": "opuscar-crayon-book",
+    "title_zh": "蜡笔儿童绘本 (Crayon Picture Book)",
+    "title_en": "Crayon Picture Book",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/crayon-book.jpg",
+    "poster_url": "./assets/lemo/crayon-book.jpg",
+    "desc": "【手绘与绘画 · 样片《The Moon Can't Sleep》】月亮失眠了，小女孩爬上屋顶给它唱摇篮曲。",
+    "recipe": "适用场景：Picture books, Bedtime stories, Kids' learning\n\n# Crayon Picture Book — Style Prompt\n\n> A picture-book page drawn live in wax crayon on toothy paper, with a watercolour wash that reveals what the crayon was hiding.\n> References (grammar only): Raymond Briggs' *The Snowman* (1982) (hand-textured frames that breathe, wordless tenderness, a lyrical passage carried by one tune, still backgrounds with living figures). Copy none of its characters, song or imagery, and never name it in the film.\n\n## 1. Essence, and what it is not\n\nA children's picture book page **being drawn while you watch**: wax crayon on warm off-white paper, a limited box of crayons, child-logic perspective, colour that spills past the outline, and every line gently **boiling** because each frame is a fresh drawing. The tone is picture-book storytelling: tender, unhurried, music-led, a few lines of narration that are literally the words printed on the page. Any topic becomes **one page of a picture book that gets finished**: drawing and colouring are the plot.\n\nIt is not \"cute vector art with a crayon filter\": the look comes from **material physics** (wax sticks only to the peaks of the paper tooth, pressure decides how much of the tooth it reaches, watercolour is",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/crayon-book/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "crayon-book",
+      "Picture books",
+      "Bedtime stories"
+    ]
+  },
+  {
+    "id": "opuscar-dark-keynote",
+    "title_zh": "暗色科技发布 (Dark Tech Keynote)",
+    "title_en": "Dark Tech Keynote",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/dark-keynote.jpg",
+    "poster_url": "./assets/lemo/dark-keynote.jpg",
+    "desc": "【信息与发布 · 样片《Room to Think》】虚构 app Tidy 的发布片：被埋掉的光标一键把几百个窗口归位。",
+    "recipe": "适用场景：Product launches, SaaS, Keynotes\n\n# Dark Tech Keynote — Style Prompt\n\n> A software launch film where the interface itself is the star: near-black gradient, hairline grid, soft light, one brand accent, and UI that moves with snap-grid precision. Light reveals, one giant number, and a sound design that is as ordered as the pixels.\n> **References (grammar only):** Apple product reveals (black stage, light sweeps, one line per screen, the lone giant number); Linear / Stripe / Vercel launch videos (snap-grid motion, 1 px lines, one accent); Steve Reich's process music (phasing, subtraction); Edgar Wright's insert cuts. Never use their names, interfaces, fonts, system controls, melodies or logos, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nA keynote-grade product film for **software**. There is no physical product and no glass render: the protagonist is the interface (a cursor, windows, notifications, tiles, a number). It lives on a dark stage lit by soft, cool light, with **one brand accent** reserved for the single most important element.\n\nThe style is defined by **precision**: every element snaps to a grid, every motion lands on a beat, every sound belongs to one designed family. Drama comes f",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/dark-keynote/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "dark-keynote",
+      "Product launches",
+      "SaaS"
+    ]
+  },
+  {
+    "id": "opuscar-data-physical",
+    "title_zh": "数据实物化 (Data Physicalization)",
+    "title_en": "Data Physicalization",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/data-physical.jpg",
+    "poster_url": "./assets/lemo/data-physical.jpg",
+    "desc": "【实证影像 · 样片《Two Spirals》】十二年风电和太阳能装机叠成实物，绕表盘升成两条螺旋，2021 年太阳能反超。",
+    "recipe": "适用场景：Annual reports, Investor decks, Energy data\n\n# Data Physicalization — Style Prompt\n\n> Real statistics built as real objects: every unit is a countable piece of material (a plate, a block, a coin, a bar) stacked to exact scale on a crafted base, shot like a product in a studio — soft key, long shadows, shallow depth of field, physically based materials. The camera reads a number at the edge of one plate, follows the data as it grows, and pulls back until the chart is an installation.\n> References (grammar only): data-sculpture and physical-visualisation practice (one unit = one object, the object is the axis); product and still-life photography (a warm key at a low angle, a cool rim, a seamless sweep); annual-report editorial design (one reading per screen, a source line, a quiet grotesk). Copy none of them; never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The unit is an object.** One plate, block or coin equals one stated quantity, and the rule is said on screen once (\"1 plate = 10 GW\"). A heavier material marks every tenth unit, so the stack is its own ruler.\n- **Scale is exact.** Heights, counts and areas are computed from the data; rounding is one unit at most and written in the facts. Two series compar",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/data-physical/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "data-physical",
+      "Annual reports",
+      "Investor decks"
+    ]
+  },
+  {
+    "id": "opuscar-dataviz",
+    "title_zh": "数据叙事 (Data Storytelling)",
+    "title_en": "Data Storytelling",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/dataviz.jpg",
+    "poster_url": "./assets/lemo/dataviz.jpg",
+    "desc": "【信息与发布 · 样片《A Hundred Summers》】一百年的夏季气温，图表本身就是故事。",
+    "recipe": "适用场景：Data journalism, Reports, Climate & science\n\n# Data Storytelling — Style Prompt\n\n> A chart that tells a story: real data, drawn mark by mark on cream paper by a red–blue pencil, with handwritten notes pinned to the numbers. The chart itself is the camera, the rhythm and the plot.\n> References (grammar only): Hans Rosling's *200 Countries, 200 Years, 4 Minutes* (one dot is a character), Ed Hawkins' warming stripes (a diverging ramp on a reference mean, no axes), The Pudding / NYT scrollytelling (one idea at a time, growing axes, pinned notes). Copy none of their charts, layouts or typefaces; never name them in the film.\n\n## 1. Essence, and what it is not\n\n**The chart is the film.** Every mark is a real number and every movement is a meaningful chart operation (a mark lands, an axis grows, the scale changes, a series morphs, a note is pinned). The data is real, openly licensed and traceable. You change the framing, never the numbers.\n\n**Pick the chart the data asks for:**\n\n| The data is about | Chart |\n|---|---|\n| comparing categories, rankings | bars, a ranked bar race |\n| a relationship between two measures | scatter or bubble chart (one dot can be a character) |\n| place | map, choropleth, dots on a map |\n| parts of a whole,",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/dataviz/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "dataviz",
+      "Data journalism",
+      "Reports"
+    ]
+  },
+  {
+    "id": "opuscar-desktop-flythrough",
+    "title_zh": "桌面穿梭 (Desktop Flythrough)",
+    "title_en": "Desktop Flythrough",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/desktop-flythrough.jpg",
+    "poster_url": "./assets/lemo/desktop-flythrough.jpg",
+    "desc": "【材质与 3D · 样片《Before the Ding》】一张猫照片跳过桌上的应用卡片，从一台手机飞到朋友手机里，一镜跟到底。",
+    "recipe": "适用场景：App explainers, Workflows, Products\n\n# Desktop Flythrough 桌面穿梭 — Style Prompt\n\n> App screens and tools lie on a sunlit desk as printed paper cards; small pixel characters, popped up into voxel toys, carry the work from card to card, while one unbroken camera flies after them, whips between stops and finally pulls back over the whole desk.\n> References (grammar only): one-take desktop tours in software launch films (windows laid flat as places, a small helper as the guide); macro toy photography (low warm sun, long soft shadows); pixel-art sprites (the cast's look). Never copy their characters, layouts, icons or music.\n\n## 1. Essence, and what it is not\n\n- **The desk is the world.** A matte paper mat with a regular dot grid lies on a light wooden desk, lit by one low warm sun through a window. Everything sits on it and casts a long, soft shadow. A few everyday desk things (a pen, sticky notes, a mug, earbuds) sit around the edges as foreground and background layers.\n- **Interfaces are paper cards.** Phones, tools and dashboards are rounded slabs a few millimetres thick with the interface printed on top. They are places: characters stand and hop on them, and parts of the interface rise out of them as small 3D objects.\n-",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/desktop-flythrough/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "desktop-flythrough",
+      "App explainers",
+      "Workflows"
+    ]
+  },
+  {
+    "id": "opuscar-engraving",
+    "title_zh": "铜版画 (Copperplate Engraving)",
+    "title_en": "Copperplate Engraving",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/engraving.jpg",
+    "poster_url": "./assets/lemo/engraving.jpg",
+    "desc": "【印刷与版画 · 样片《The Honeybee, Plate VII》】一张博物志图版自己刻出来：雕刀推开铜版，蜜蜂一线线成形，最后手工水彩上色。",
+    "recipe": "适用场景：Museum labels, Science explainers, Brand heritage\n\n# Copperplate Engraving — Style Prompt\n\n> An intaglio plate that engraves itself: a burin cuts swelling lines into copper, a proof is pulled, and the figure builds up — outline, hatching, cross-hatching — until engraved lettering, magnified details and a hand-laid wash make a finished plate.\n> References (grammar only): 19th-century natural-history plates — Haeckel, Audubon, Westwood, the *Britannica* copperplates (centred subject, numbered roundels, roman title over an italic name, \"del.\" / \"sculp.\" credits, the plate mark); Hogarth and Doré for the burin line (hatching that follows the form, crossing only in half-tones); hand-coloured plates for washes laid after printing. Never copy a plate, pose, border or title.\n\n## 1. Essence, and what it is not\n\nAn **intaglio print**: the line is ink held in a groove a burin cut into copper. Three rules:\n\n1. **Tone is made of lines, never of fills.** Light is bare paper; half-tone is one family of parallel lines; shadow a second family crossing it; the deepest dark a third, lozenge-making family. No grey fill anywhere in the ink.\n2. **Every line swells and tapers.** The burin enters fine, bites deeper mid-run and lifts out to a point. Lines",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/engraving/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "engraving",
+      "Museum labels",
+      "Science explainers"
+    ]
+  },
+  {
+    "id": "opuscar-game-show",
+    "title_zh": "综艺节奏扁平 (Game Show Flat)",
+    "title_en": "Game Show Flat",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/game-show.jpg",
+    "poster_url": "./assets/lemo/game-show.jpg",
+    "desc": "【游戏 · 样片《Rhythm of AI, 1997 → 2026》】把 AI 发展史做成一局节奏游戏，模型踩着拍登场，最后发成绩单。",
+    "recipe": "适用场景：Tech timelines, Year in review, Variety shows\n\n# Game Show Flat — Style Prompt\n\n> A rhythm-game variety show in flat vector: toy-like mascots with thick ink outlines on candy-coloured stripes and sunbursts, every hit landing on a fixed tempo grid, call-and-response patterns, and a judgement word when each round is won.\n> References (grammar only): rhythm-action party games in the Rhythm Heaven mould (cue → answer, round cards, judgement words), Japanese variety-show telops (thick outlined captions, stripe and sunburst sets), WarioWare-style stage cards. Never use their names, characters, UI, levels or music.\n\nThe length follows the number of rounds: each round is a title card plus its bars of play. Narration is optional: the style can carry a film on short shouts and telops alone.\n\n## 1. Essence, and what it is not\n\n- **Everything is on the grid.** One fixed, fast tempo. Every pop, drop, stamp, typed character and camera punch sits at a (bar, beat) and is also a sound event; the score is generated from the picture's own timeline, so they can't drift.\n- **One drawing kit, many sets.** Flat fills, one heavy ink outline, round caps, hard offset shadows; each round gets a new saturated background colour and pattern.\n- **Characters",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/game-show/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "游戏",
+      "game-show",
+      "Tech timelines",
+      "Year in review"
+    ]
+  },
+  {
+    "id": "opuscar-glass-product",
+    "title_zh": "玻璃质感产品 (Glass Product Render)",
+    "title_en": "Glass Product Render",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/glass-product.jpg",
+    "poster_url": "./assets/lemo/glass-product.jpg",
+    "desc": "【材质与 3D · 样片《Aura — Hear the Light》】虚构玻璃耳机 Aura 的开箱与特写。",
+    "recipe": "适用场景：Product launches, Consumer tech, Beauty\n\n# Glass Product Render — Style Prompt\n\n> Launch-film product rendering in transparent and frosted glass: a dark-field studio, strip-light sweeps, dispersion, caustics, light travelling inside the object, slow exploded views that snap shut on a downbeat.\n> References (grammar only): premium launch films (a sweep drawing a contour in the dark, slow orbits, macro rack focus, cuts on the beat, ultra-thin wide type); transparent-hardware adverts (internals as ornament, exploded views, black and white plus one accent); dark-field glass photography. Copy none of their silhouettes, typefaces, sounds or colour templates, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nA single hero object of **glass, metal and light** floating in an infinite black studio. Long strips *behind and beside* it turn clear glass into a thin white outline with rainbow edges; the internals show through as in a display case. Everything moves slowly and precisely; every cut, sweep and pulse lands on the beat.\n\nThe object is always **fictional**. Never reproduce a real product silhouette (a famous phone or headphone outline), a real brand name, logo, typeface or UI.\n\nNot a white-cyclorama catalogu",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/glass-product/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "glass-product",
+      "Product launches",
+      "Consumer tech"
+    ]
+  },
+  {
+    "id": "opuscar-halftone-dossier",
+    "title_zh": "复古半调案卷 (Halftone Dossier)",
+    "title_en": "Halftone Dossier",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/halftone-dossier.jpg",
+    "poster_url": "./assets/lemo/halftone-dossier.jpg",
+    "desc": "【印刷与版画 · 样片《Case File: Chubby》】橘猫胖橘被立案审查：测试重力、凌晨跑酷，最后无罪释放。",
+    "recipe": "适用场景：Humour, Pet content, Social shorts\n\n# Halftone Dossier — Style Prompt\n\n> A retro print case file: cream archive paper, overprinted halftone dots in a few flat inks, huge heavy headlines with misregistered shadows, rubber stamps that slam, and thick-outlined characters. The film is a file that is read out one exhibit at a time.\n> References (grammar only, never copy): Ben-Day-dot pop-art printing (Roy Lichtenstein era comics) for dot density as shading; riso/offset overprint zines for multiply layers and misregistration; police mugshot height charts and case-file folders for the framing device; Japanese variety-show telop captions for the keyword-highlight caption bar.\n\n## 1. Essence, and what it is not\n\n- **The whole film is paper.** A warm cream sheet with low-frequency mottling, fine grain, a vignette and a fold; dark scenes are printed on it too, never glowing.\n- **Shading is never a gradient**: it is halftone dots whose size follows a density field. Two or three dot layers at different screen angles overprint (multiply); that is the \"printed\" feel.\n- **Bureaucratic apparatus**: case numbers, file chips, numbered exhibits, height charts, name plates, stamps. Their seriousness is the frame; the subject can be grave",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/halftone-dossier/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "halftone-dossier",
+      "Humour",
+      "Pet content"
+    ]
+  },
+  {
+    "id": "opuscar-hd-2d",
+    "title_zh": "HD-2D (HD-2D)",
+    "title_en": "HD-2D",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/hd-2d.jpg",
+    "poster_url": "./assets/lemo/hd-2d.jpg",
+    "desc": "【游戏 · 样片《The Lampbearer》】灯塔熄灭，孙女提着最后一簇火穿过夜林、爬上风暴悬崖。",
+    "recipe": "适用场景：Game trailers, Fantasy, Story films\n\n# HD-2D — Style Prompt\n\n> Hand-made pixel sprites standing like paper cut-outs inside a lit, fogged, fully 3D diorama, shot from a high three-quarter angle through a tilt-shift lens: a toy world where every lamp throws a real shadow.\n> References (grammar only): *Octopath Traveler* (Square Enix × Acquire, 2018) and its sequel (2023), the games that defined the HD-2D look. Learn the grammar: sprite-in-diorama, high 3/4 camera, tilt-shift focus band, point lights with shadows, heavy bloom and vignette, framed dialogue box. Never use their characters, places, logos, UI ornaments or music, and never name them in the film.\n> Name: \"HD-2D\" is Square Enix's term (and trademark) for that look. The library borrows it only to describe the style; this style and its demo have no connection to Square Enix and are not endorsed by it. Don't use \"HD-2D\" as a title or brand in a film.\n\n## 1. Essence, and what it is not\n\nA **3D miniature set** of boxes and cylinders wrapped in **pixel-art textures**, populated by **flat 2D pixel sprites that receive light and cast shadows**, seen from a **high, far camera** through a **tilt-shift band** so the world reads as a tabletop model. **Light is the subject*",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/hd-2d/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "游戏",
+      "hd-2d",
+      "Game trailers",
+      "Fantasy"
+    ]
+  },
+  {
+    "id": "opuscar-hologram-hud",
+    "title_zh": "科幻全息界面 (Sci-fi Hologram HUD)",
+    "title_en": "Sci-fi Hologram HUD",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/hologram-hud.jpg",
+    "poster_url": "./assets/lemo/hologram-hud.jpg",
+    "desc": "【信息与发布 · 样片《Volt · Spec Scan》】电助力车被扫描成全息线框，目标框依次锁定电池、电机、刹车。",
+    "recipe": "适用场景：Spec walkthroughs, Launch videos, Trade shows\n\n# Sci-fi Hologram HUD — Style Prompt\n\n> An object is scanned into a glowing wireframe. Target boxes lock onto its parts; each opens in a local exploded view, a leader pulls out, and its number rolls from garbage glyphs into the real value. It may light up, once, into a solid hologram.\n> References (grammar only): the *Iron Man* / *Avengers* HUDs (target boxes, callouts, rolling numbers, layered depth); the *Oblivion* interfaces (one colour, hairlines, space); CAD exploded views. Copy none of their layouts, icons, fonts or colours.\n\nA **scene style**: it does a practical job (a spec walkthrough, a teardown, a loop screen) for any object with parts. See §11 for the jobs.\n\n## 1. Essence, and what it is not\n\nThe subject is always a **line wireframe made of light** above a round projector pad on a near-black stage, never a rendered object. Everything reads as *scanned data*: a scan plane grows the model, parts pull apart along their assembly axes, numbers are *computed* on screen.\n\nThree depth layers are always present: a **background dot grid** (slow parallax), the **subject** with its pad and floor, and the **foreground HUD** (corner brackets, rulers that parallax faster, status text)",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/hologram-hud/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "hologram-hud",
+      "Spec walkthroughs",
+      "Launch videos"
+    ]
+  },
+  {
+    "id": "opuscar-impasto",
+    "title_zh": "油画厚涂 (Impasto Oil Painting)",
+    "title_en": "Impasto Oil Painting",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/impasto.jpg",
+    "poster_url": "./assets/lemo/impasto.jpg",
+    "desc": "【手绘与绘画 · 样片《The Colour of Rain》】灰色雨中广场，第一把红伞撑开，圆舞曲把整个广场刷上颜色。",
+    "recipe": "适用场景：Music videos, Art & culture, Emotional ads\n\n# Impasto · Palette Knife — Style Prompt\n\n> Thick oil paint laid with a palette knife: big, flat, sharp-edged planes of colour, raked by light so every ridge of paint shows. Clarity first: value structure before texture, hard edges at the focus, calm planes everywhere else.\n> References (grammar only): the opening titles of *The Umbrellas of Cherbourg* (1964) (overhead choreography read as moving colour); palette-knife street paintings (Leonid Afremov and the genre around him) (knife mosaic, vertical wet reflections, warm lights against cool shadow); Sorolla / Sargent (few, decisive strokes and strong light); Edgar Wright's music-locked editing (one action, one sound, one cut). Never copy their images, compositions, melodies or characters, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nA moving oil painting made of knife strokes. Each stroke is a real object: a slanted plane of paint with a ridge where the blade pressed, a lip where it lifted off, broken streaks where the paint ran out, two colours dragged into each other. The world is **repainted from its strokes every frame**, but static paint never moves: only things that move in the story move. Light rakes",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/impasto/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "impasto",
+      "Music videos",
+      "Art & culture"
+    ]
+  },
+  {
+    "id": "opuscar-ink-wash",
+    "title_zh": "中国水墨 (Chinese Ink Wash)",
+    "title_en": "Chinese Ink Wash",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/ink-wash.jpg",
+    "poster_url": "./assets/lemo/ink-wash.jpg",
+    "desc": "【手绘与绘画 · 样片《The Swordsman and the River》】侠客踏水过江，一剑断流。",
+    "recipe": "适用场景：Wuxia, Cultural brands, Poetry\n\n# Chinese Ink Wash — Style Prompt\n\n> Xieyi ink painting on rice paper, animated: blank paper is space, one brushstroke is a mountain, a wave, a gesture or a cut.\n> References (grammar only): Shanghai Animation Film Studio's *Feelings of Mountains and Water* (1988) (blank-paper space, ink bloom, guqin pacing, figures in a few strokes); the bamboo-forest fight of *Crouching Tiger, Hidden Dragon* (weightlessness, stillness before action). Copy none of their characters, compositions or music.\n\n## 1. Essence, and what it is not\n\nAn ink painting (水墨) painted and unrolled before you: black ink on warm rice paper in five tones, plus **one** red, the vermilion seal. No Western outlines: forms are made by **loaded brushstrokes** whose dark edge *is* the contour (没骨, \"boneless\" painting), by **wet washes** that bleed into the paper, and by **dry, fast strokes** where the paper shows through the bristle tracks (飞白, \"flying white\").\n\nMost of the frame is **empty paper** (留白): water, sky, mist, silence. Things are *painted into existence*, not cut to.\n\nNot watercolour (no colour washes), not vector art with a brush texture (no flat fills or closed outlines), not a calligraphy title sequence.\n\n##",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/ink-wash/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "ink-wash",
+      "Wuxia",
+      "Cultural brands"
+    ]
+  },
+  {
+    "id": "opuscar-iso-infographic",
+    "title_zh": "等距信息图 (Isometric Infographic)",
+    "title_en": "Isometric Infographic",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/iso-infographic.jpg",
+    "poster_url": "./assets/lemo/iso-infographic.jpg",
+    "desc": "【信息与发布 · 样片《From Bean to Cup》】一杯咖啡从种植园到你手里的旅程。",
+    "recipe": "适用场景：Process explainers, Supply chains, Annual reports\n\n# Isometric Infographic — Style Prompt\n\n> A system diagram comes alive: an isometric diorama of flat three-tone blocks, thin ink labels and Isotype numbers, where things open up to show their insides and the numbers are drawn, not stated.\n> References (grammar only): *Monument Valley* (true-isometric architecture, flat colour blocks, three fixed tones per face, a camera that pans and zooms but never breaks the projection); *SimCity 2000*-style cutaway dioramas (a floating board with soil strata, the whole system visible at once); Kurzgesagt (a question, a steady push forward, one clear visual metaphor per step, a change of scale when a number is too big to feel); Isotype, Otto Neurath / Gerd Arntz (repeated identical icons stand for quantity); *Powers of Ten* (a continuous dive through nested scales). Use none of their characters, buildings, icons, palettes or music.\n\n## 1. Essence, and what it is not\n\n- **Flat, true isometric.** No perspective, no outlines on solids; shapes are separated only by the three tones of each face. The projection never rotates or tilts.\n- **Infographic furniture is part of the picture**: leader lines, label pins, dashed cut lines, hatched section faces,",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/iso-infographic/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "iso-infographic",
+      "Process explainers",
+      "Supply chains"
+    ]
+  },
+  {
+    "id": "opuscar-isometric-picture-book",
+    "title_zh": "等距绘本 (Isometric Picture Book)",
+    "title_en": "Isometric Picture Book",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/isometric-picture-book.jpg",
+    "poster_url": "./assets/lemo/isometric-picture-book.jpg",
+    "desc": "【信息与发布 · 样片《Seventy-Two Seats》】等距的登机口和机舱里，小人按顺序登机，讲清哪种叫法快将近一半。",
+    "recipe": "适用场景：Everyday rules, Queues, Comparisons\n\n# Isometric Picture Book — Style Prompt\n\n> A calm explainer of an everyday rule, set in one real place drawn in true isometric with flat colour: small faceless people seen from behind do the thing in order, while serif type lands on the ground, character by character, as if painted there. Whatever hides the action (a roof, a wall) is cut away or lifts off like a paper flap. The order of movement is the explanation.\n> References (grammar only): isometric explainers about public manners (queues, platforms, crossings) and picture-book cutaways where a roof or a wall is lifted away to show the inside. Take the calm pacing, people as the diagram and type on the floor; never copy their characters, layouts, typefaces or music.\n\n## 1. Essence, and what it is not\n\n- **One real place, full bleed.** A platform, a gate, a cabin, a crossing, a counter: the ground runs off every edge of the frame. No floating board, no frame line, no vignette. A topic that travels (a parcel, a route, a production line) can still be one place: one continuous ground at one scale, with the stops along it (see §11); what breaks the look is a separate board, a map view or a change of scale for each stop.\n- **People a",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/isometric-picture-book/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "isometric-picture-book",
+      "Everyday rules",
+      "Queues"
+    ]
+  },
+  {
+    "id": "opuscar-kino-montage",
+    "title_zh": "构成主义蒙太奇 (Constructivist Montage)",
+    "title_en": "Constructivist Montage",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/kino-montage.jpg",
+    "poster_url": "./assets/lemo/kino-montage.jpg",
+    "desc": "【剪辑与纪实 · 样片《410 Days》】帝国大厦的小册子写着建造者，工地实拍和老照片给出答案：每天 2,500 人。",
+    "recipe": "适用场景：Industry histories, Milestones, Collective effort\n\n# Constructivist Montage — Style Prompt\n\n> Real archive footage, photographs and documents, printed as one ink-and-paper poster with a single red, and cut on a machine beat. Diagonal bands carry the type; windows cut along the axis hold the film; people are scissored out of photographs and stacked into structures; numbers count, documents are marked in red, and two images collide to make a third idea.\n> References (grammar only): Soviet montage cinema of the 1920s (city symphonies with split screens, counting and machine rhythm; \"intellectual\" montage where A + B yields a concept), constructivist posters and photomontage (red / black / paper, steep diagonals, photo cut-outs with geometric blocks, type as structure). Never copy their shots, layouts, slogans or lettering, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **Evidence, recut.** Every picture is real material (archive film, photographs, documents) about the actual subject. The film's argument comes from how they are cut and set, not from illustration.\n2. **One printed sheet.** All material is converted to the same two-tone print (warm ink → paper); red is the only colour and is laid on top as a prin",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/kino-montage/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "kino-montage",
+      "Industry histories",
+      "Milestones"
+    ]
+  },
+  {
+    "id": "opuscar-lidar-survey",
+    "title_zh": "点云测绘 (LiDAR Survey)",
+    "title_en": "LiDAR Survey",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/lidar-survey.jpg",
+    "poster_url": "./assets/lemo/lidar-survey.jpg",
+    "desc": "【实证影像 · 样片《The Fields Under the Forest》】激光点云剥掉一片森林的树冠，露出当年农田的石墙：3.4 公里。",
+    "recipe": "适用场景：Heritage, Environment, Site surveys\n\n# LiDAR Survey — Style Prompt\n\n> Real airborne laser points of a real place, floating in the dark as a measured cloud; a scan line or a cutting plane passes through them and the points condense into a solid, raking-lit surface, which is then measured with hairline instruments. One designed camera move carries the whole film: the cloud is something you fly through, not a picture you look at.\n> References (grammar only): survey and archaeology lidar visualisations (colour as height, the canopy removed); architectural section drawings (a cut, dimensioned); museum film cadence (one held reading per screen). Copy none of their layouts, ramps, typefaces or music, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The cloud is the data**: every point is a real return at its measured position; points appear, glow, lift away or give way to a surface, but are never moved into a shape.\n- **Points become a surface**: a front (scan line, cutting plane) behind which the cloud condenses into a solid model of the same place.\n- **Classification is a lever**: ground, vegetation, buildings, water are layers to peel, isolate and recolour.\n- **Measurement in hairlines**: one readi",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/lidar-survey/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "lidar-survey",
+      "Heritage",
+      "Environment"
+    ]
+  },
+  {
+    "id": "opuscar-living-screencast",
+    "title_zh": "活体实机录屏 (Living Screencast)",
+    "title_en": "Living Screencast",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/living-screencast.jpg",
+    "poster_url": "./assets/lemo/living-screencast.jpg",
+    "desc": "【信息与发布 · 样片《Clawd Moves In》】像素小人 Clawd 搬进 Claude 应用，一镜到底演示 Plan 模式和自检。",
+    "recipe": "适用场景：Product tutorials, Feature launches, Onboarding\n\n# Living Screencast — Style Prompt\n\n> A product walkthrough that looks like a real screen recording, where a low-resolution mascot lives inside a high-resolution interface and acts out what the software is doing.\n> References (grammar only):\n> - **Screen Studio-style product recordings:** auto-zoom to the cursor, cursor smoothing, click push-ins, and a window floating on wallpaper.\n> - **Apple \"Guided Tour\" videos:** real interface, calm narration, one feature per sentence.\n> - **Duolingo and Headspace mascot motion:** squash and stretch, anticipation, a character that performs inside the UI.\n> - **The Browser Company (Arc) launch films:** playful tone and fast cutting.\n>\n> Never copy their characters, UI, music or footage.\n\nA walkthrough of a piece of software, typically 45–75 s. The user gives the product and the features; you decide the story, shots, choreography, sound and music.\n\n## 1. Essence, and what it is not\n\nThe film looks like a **screen recording of the real product**, but it is not a recording. Every window, menu, diff line and button is **redrawn in 2D (HTML/CSS/SVG)**, so the camera can go anywhere, every pixel is controllable and text stays sharp at any zoom.\n\nA **",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/living-screencast/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "living-screencast",
+      "Product tutorials",
+      "Feature launches"
+    ]
+  },
+  {
+    "id": "opuscar-lowpoly-island",
+    "title_zh": "低多边形等距 (Low-poly Isometric Island)",
+    "title_en": "Low-poly Isometric Island",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/lowpoly-island.jpg",
+    "poster_url": "./assets/lemo/lowpoly-island.jpg",
+    "desc": "【材质与 3D · 样片《The Island That Grew》】空海里一格格长出小岛和村庄，每放一块响一个音符，直到星空。",
+    "recipe": "适用场景：Game trailers, World building, Calm content\n\n# Low-poly Isometric Island — Style Prompt\n\n> A tiny faceted world seen through an orthographic isometric lens: everything is a geometric block, and everything that appears arrives with a bounce and a note.\n> References (grammar only): *Townscaper* (building is the performance; every piece lands with a springy bounce and a sound; pieces sprout small details by themselves); *Monument Valley* (isometric geometry, soft pastel palettes, gradient skies, calm pacing, lots of empty space). Never copy their grids, buildings, characters, UI or typography, and never name them on screen.\n\n## 1. Essence, and what it is not\n\nA miniature world built from **flat-shaded low-poly geometry** (hexagonal tile columns, box buildings with prism roofs, cone and icosahedron trees) floating in a faceted sea or void, watched by an **orthographic camera** at an isometric angle. No perspective and no horizon: distance dissolves into a **screen-space sky gradient**, so the world looks like a model suspended in colour. **Light, not texture, tells time**: every facet changes colour as the sun moves; in the dark only emissive blocks keep their colour.\n\nNot a voxel game (no cubes-of-cubes, no pixel texture), not a",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/lowpoly-island/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "lowpoly-island",
+      "Game trailers",
+      "World building"
+    ]
+  },
+  {
+    "id": "opuscar-memphis-diorama",
+    "title_zh": "孟菲斯微缩景观 (Memphis Diorama)",
+    "title_en": "Memphis Diorama",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/memphis-diorama.jpg",
+    "poster_url": "./assets/lemo/memphis-diorama.jpg",
+    "desc": "【材质与 3D · 样片《Four Seasons in Pomelo Town》】一个河湾一镜过完四季，大树一蹲一弹，就换一季。",
+    "recipe": "适用场景：Web heroes, Ambient loops, Seasons\n\n# Memphis Diorama — Style Prompt\n\n> A place built as a tabletop model: on warm white paper an organic, grainy frame grows open, and inside it a small world in flat Memphis colours, ink outlines, hard purple shadows and tiny patterns, full of small motions under a slow camera. Calm, bright and warm; a place you watch, not a story you follow.\n> References (grammar only): the Memphis Group, Ettore Sottsass, Nathalie Du Pasquier (saturated primaries next to pastels, dots, zigzags and terrazzo flecks on every surface); architectural and railway-layout models (a whole place seen from above, at once); children's picture-book towns (every window has a flower box, every corner has something going on); risograph halftone (shadow as a field of dots). Use none of their objects, layouts, palettes or music.\n\n## 1. Essence, and what it is not\n\n- **Paper and a grainy frame.** A warm white ground; the picture lives in a rounded, organic frame whose edge dissolves into grain. It grows open from the centre at the start and draws back in at the end.\n- **Memphis flat colour.** Saturated primaries plus pastels, flat fills, no gradients; a deep-indigo ink outline; small patterns tiled on surfaces (dots,",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/memphis-diorama/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "memphis-diorama",
+      "Web heroes",
+      "Ambient loops"
+    ]
+  },
+  {
+    "id": "opuscar-microgame",
+    "title_zh": "微游戏快闪 (Microgame Frenzy)",
+    "title_en": "Microgame Frenzy",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/microgame.jpg",
+    "poster_url": "./assets/lemo/microgame.jpg",
+    "desc": "【游戏 · 样片《Five-Second Astronaut》】见习宇航员闯五秒训练营，越来越快，Boss 关亲手降落回地球。",
+    "recipe": "适用场景：Game trailers, Onboarding, Social shorts\n\n# Microgame Frenzy — Style Prompt\n\n> A rapid-fire party-game film: one command word, a few seconds, one action. Every microgame is drawn in a completely different art style, and the film keeps getting faster.\n> Genre reference (grammar only): the WarioWare series. Never use its name, characters, UI, microgames or music.\n\nThe format suits short films; once the frenzy stops building, end it.\n\n## 1. Essence, and what it is not\n\n- **A microgame = a shouted command word + 2.5–4 s + one action + one result** (success, or a funny failure).\n- **Each microgame uses a different visual medium** (crayon, ink wash, terminal, risograph, pixel, blueprint, Swiss type, clay, cut paper, woodcut…). The jolt of each switch is both the joke and the beat.\n- **One fixed home look** holds the film together: a show stage with a host, a lives counter and a stage number, which the film returns to between games.\n- **It keeps accelerating**: every few games tempo, game length, dwell, command hold and animation frame rate step up together.\n- **The hero survives every medium** by keeping two or three silhouette marks.\n\nNot Game Show Flat (one art style, rounds of bars, call-and-response), not a style sampler ree",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/microgame/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "游戏",
+      "microgame",
+      "Game trailers",
+      "Onboarding"
+    ]
+  },
+  {
+    "id": "opuscar-microscope",
+    "title_zh": "显微叙事 (Microscope Story)",
+    "title_en": "Microscope Story",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/microscope.jpg",
+    "poster_url": "./assets/lemo/microscope.jpg",
+    "desc": "【实证影像 · 样片《Measured Blue》】一镜从肝组织玻片推到单个细胞核，两个圆逐像素数出 2.4 倍的蓝。",
+    "recipe": "适用场景：Biomedicine, Materials science, Skincare science\n\n# Microscope Story — Style Prompt\n\n> Real, licence-clean microscopy of a real specimen, seen as it is, and one continuous change of scale that carries the viewer from the glass slide in the hand to a single cell. Focus breathes when the magnification changes, a focal plane sweeps when the camera lands, and every scale bar, field of view and reading comes from the image's own metadata.\n> References (grammar only): Charles and Ray Eames' *Powers of Ten* (one continuous change of scale with a readout riding along); premium microscope launch films (dark bench, glass catching light, restrained marks, clean instrument sound); digital-pathology viewers' instruments (scale bar, field of view, magnification). Copy none of their layouts, interfaces, typefaces or music; never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The specimen is a photograph**: a real micrograph or whole-slide scan of the actual sample, CC0, public domain or CC BY. Nothing on the specimen is drawn, retouched or generated. A whole-slide image (WSI) is the ideal source: one sample, one registered pyramid from millimetres to microns, with the pixel size in its metadata.\n- **Scale is the camera**: one log",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/microscope/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "microscope",
+      "Biomedicine",
+      "Materials science"
+    ]
+  },
+  {
+    "id": "opuscar-midcentury-toon",
+    "title_zh": "50s 扁平卡通 (Mid-century Cartoon)",
+    "title_en": "Mid-century Cartoon",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/lemo/midcentury-toon.jpg",
+    "poster_url": "./assets/lemo/midcentury-toon.jpg",
+    "desc": "【卡通与动画 · 样片《Meet Pip》】用 50 年代教育片的口吻，三步教你装好一台扫地机。",
+    "recipe": "适用场景：Set-up guides, Help centres, How-to\n\n# Mid-century Cartoon — Style Prompt\n\n> 1950s flat colour and limited animation for \"follow along\" films: colour printed a few pixels off its broken ink line, bodies that hold still while hands do the work, abstract colour-block rooms, a calm classroom narrator, and a cool-jazz combo.\n> References (grammar only): UPA's early-1950s shorts (*Gerald McBoing-Boing*, *Rooty Toot Toot*): colour and line on separate cels, geometric people, colour-plane backgrounds, limited animation. 1950s classroom films (Coronet, Encyclopaedia Britannica): direct address, one sentence per picture, numbered cards. Charley Harper and Mary Blair: soft atomic-age complements, geometric figures. 1950s appliance manuals: numbered medallions, curved arrows, round call-outs, sunbursts. Copy none of their characters, drawings, lettering or music, and never name them in a film.\n\nA **scene style**: it performs a real use (a set-up guide, a how-to, a recipe card, a safety card) rather than telling a story. The viewer should come away able to do the thing. See §11 for the jobs.\n\n## 1. Essence, and what it is not\n\nFlat, printed-looking colour with a thin, breathing ink line that never quite closes. **Every fill is a",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/midcentury-toon/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "卡通与动画",
+      "midcentury-toon",
+      "Set-up guides",
+      "Help centres"
+    ]
+  },
+  {
+    "id": "opuscar-news-package",
+    "title_zh": "电视新闻包装 (Broadcast News Package)",
+    "title_en": "Broadcast News Package",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/news-package.jpg",
+    "poster_url": "./assets/lemo/news-package.jpg",
+    "desc": "【剪辑与纪实 · 样片《The Week in AI》】一周四条 AI 新闻，一整套电视台包装：串联单、标题条、翻牌价格表、规格卡。",
+    "recipe": "适用场景：News round-ups, Bulletins, Market updates\n\n# Broadcast News Package — Style Prompt\n\n> A television newsroom's on-air package, built entirely in code: a sting that becomes the channel bug, a rundown of today's stories that opens and closes the bulletin, a lower-third strap that never leaves the bottom of the frame, and full-frame graphics (split-flap price boards, a line breaking a threshold, explainer maps, documents flying out of a city, quote cards, spec cards with proportion bars, stamps) that carry the facts. The style is the **package system plus its cutting rules**, not a drawing style. 16:9, a clean frame: no burned-in subtitles, no news crawl.\n> References (grammar only): evening network news headline menus, financial-channel market graphics, European news channels' explainer maps, tech-desk spec cards. Never copy a broadcaster's logo, set, fonts, colours, music or idents, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **One package system, used consistently.** Every graphic is built from the same few parts: a brand plate (parallelogram), a tab in the accent colour, a paper strap, ink cards with an accent top edge, mono datelines, stamps. Viewers read the system before they read the words.\n2",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/news-package/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "news-package",
+      "News round-ups",
+      "Bulletins"
+    ]
+  },
+  {
+    "id": "opuscar-newsreel",
+    "title_zh": "1920s 新闻影片 (1920s Newsreel)",
+    "title_en": "1920s Newsreel",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/newsreel.jpg",
+    "poster_url": "./assets/lemo/newsreel.jpg",
+    "desc": "【剪辑与纪实 · 样片《Knock-Knee Alert》】1926 年报纸说查尔斯顿会跳坏膝盖，福特工人野餐会上的孩子照跳不误。",
+    "recipe": "适用场景：History stories, Fads & eras, Anniversaries\n\n# 1920s Newsreel — Style Prompt\n\n> A sound newsreel of the late 1920s, cut from real archive material: a searchlight-and-globe ident with a brass fanfare, a newspaper that spins into the lens, a fast and cheerful announcer on an optical soundtrack, place-and-date cards, maps, magazine pages and documents, wipes, flips and irises, and a hot band that can stop dead for the punchline.\n> References (grammar only): **Fox Movietone News** and **Universal Newspaper Newsreel** (1927–1930s) — the ident ritual, the announcer's patter, one story per location, the stinger after the last story; **Pathé News** — the item title card; Hollywood's **spinning newspaper** montage; **1920s hot dance bands** (Charleston rhythm, banjo, tuba). Never copy a real newsreel's name, logo, globe design, typeface or fanfare.\n\n## 1. Essence, and what it is not\n\nAn edit style: the look is in **how real material is arranged, cut, captioned and carried by sound**, not in a drawing technique.\n- **Archive in a projected gate**: 1.37:1 picture, full height, rounded corners, black outside; everything inside it shares one silver grade, gate weave, flicker, scratches and dust.\n- **News objects** do the explaining: newspa",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/newsreel/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "newsreel",
+      "History stories",
+      "Fads & eras"
+    ]
+  },
+  {
+    "id": "opuscar-one-line",
+    "title_zh": "一笔画 (One-line Drawing)",
+    "title_en": "One-line Drawing",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/one-line.jpg",
+    "poster_url": "./assets/lemo/one-line.jpg",
+    "desc": "【手绘与绘画 · 样片《The Line That Never Lifted》】一根不离纸的线画完一个人的一生，再把笔交给孩子。",
+    "recipe": "适用场景：Brand stories, Life milestones, Minimal ads\n\n# One-line Drawing — Style Prompt\n\n> A single ink line that never leaves the paper. Everything on screen is that one line being drawn; scenes don't cut, they morph.\n> References (grammar only): Osvaldo Cavandoli's *La Linea* (1971) — one line is both the world and the character, and transformations of the line are the jokes and the transitions; Gjon Mili's 1949 photographs of Picasso drawing with light — the confidence and speed of a single gesture; Norman McLaren's *Begone Dull Care* and *Boogie-Doodle* — lines drawn *to* the music. Do not copy La Linea's character, its gibberish voice, or any specific continuous-line illustration.\n\n## 1. Essence, and what it is not\n\n- **One continuous line** on warm white paper. The pen never lifts: in code the whole film can literally be one point array, from the first touch of the nib to the last frame.\n- **Everything is a line**: characters, places, objects, even time. No fills, no shading, no second line weight, no background art.\n- **We watch the line being drawn**: the camera follows the nib with a little lag and anticipation.\n- Besides ink there is only the paper and a soft **shadow of the pen** (the real world above the paper). One accent",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/one-line/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "one-line",
+      "Brand stories",
+      "Life milestones"
+    ]
+  },
+  {
+    "id": "opuscar-paper-lantern",
+    "title_zh": "纸雕灯影 (Paper-cut Lightbox)",
+    "title_en": "Paper-cut Lightbox",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "东方与古典艺术",
+    "media_type": "image",
+    "media_url": "./assets/lemo/paper-lantern.jpg",
+    "poster_url": "./assets/lemo/paper-lantern.jpg",
+    "desc": "【东方传统 · 样片《The Last Night Train》】一列老夜车跑最后一趟：从雪山小站穿过长隧道开到海边，到站后车窗一扇扇熄灭。",
+    "recipe": "适用场景：Journeys and travel, Farewells and anniversaries, Places and their stories\n\n# Paper-cut Lightbox — Style Prompt\n\n> A layered paper-cut shadow box (纸雕灯) lit from behind: 6–9 sheets of cut card stacked in a shallow box, a warm light glowing through the paper, windows and moons burning through holes, soft shadows falling from each layer onto the next. The camera is a macro lens inside a lamp: it can show the box, or let the paper scenery fill the whole screen.\n> References (grammar only): commercial paper-cut shadow-box lamps (纸雕灯 / \"shadow box lightbox\") for the layer stack and backlight; Lotte Reiniger's silhouette films for the cut-out, jointed figure language (when a film has figures); Chinese 剪纸 motifs (auspicious clouds, eaves, mountains) as one possible vocabulary. Do not copy any specific lamp design, film frame or character.\n\n## 1. Essence, and what it is not\n\nEvery shot is made of **one physical object**: a shallow box (a cavity about 0.56 × 0.33 m, 0.16 m deep) holding parallel sheets of cut paper. Two framings are both valid, and a film may use either or both: **box framing** (the lamp's edge or frame is in the picture) and **full-bleed** (the lens is inside the box and the paper scenery fills the screen). The stack, the backlight and the shadows",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/paper-lantern/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "东方传统",
+      "paper-lantern",
+      "Journeys and travel",
+      "Farewells and anniversaries"
+    ]
+  },
+  {
+    "id": "opuscar-paper-popup",
+    "title_zh": "纸片立体书 (Paper Pop-up Book)",
+    "title_en": "Paper Pop-up Book",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/paper-popup.jpg",
+    "poster_url": "./assets/lemo/paper-popup.jpg",
+    "desc": "【材质与 3D · 样片《Pip's Paper Adventure》】立体书在书桌上打开，小精灵 Pip 在纸片世界冒险，最后跳出书外。",
+    "recipe": "适用场景：Children's books, Game trailers, Story films\n\n# Paper Pop-up Book — Style Prompt\n\n> A pop-up book on a real desk becomes a stage: flat cut-paper actors with white borders perform in front of paper sets that spring up from the page, under real lamp light and a real macro lens.\n> References (grammar only): the *Paper Mario* series (flat cut-paper actors with a white border in a 3D diorama, bubbles that type on with blips, action ratings); Robert Sabuda / Matthew Reinhart pop-up books (layered V-folds, pieces rising back to front, pull-tabs); macro \"tiny world on a real desk\" photography. Never copy their characters, logos, UI or music, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nTwo worlds in one frame. **The real world** at human scale: a photoreal surface lit by an HDRI room, a few real objects, a macro lens (shallow focus, warm practical light, soft contact shadows). **The paper world**: a hardcover book in that room; when it opens, one board stands up as the **backdrop** and the lower page is the ground. Every set piece is a **flat cut-paper card** that lies on the page and **pops up** around its bottom edge. Characters are cut paper too: a few centimetres tall, flat, with a thick off-white border, a",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/paper-popup/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "paper-popup",
+      "Children's books",
+      "Game trailers"
+    ]
+  },
+  {
+    "id": "opuscar-papercut-red",
+    "title_zh": "红色窗花剪纸 (Red Paper-cut)",
+    "title_en": "Red Paper-cut",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "东方与古典艺术",
+    "media_type": "image",
+    "media_url": "./assets/lemo/papercut-red.jpg",
+    "poster_url": "./assets/lemo/papercut-red.jpg",
+    "desc": "【东方传统 · 样片《Nian Comes to Town》】除夕年兽进村，小女孩剪出的大窗花照亮全村，把它吓跑。",
+    "recipe": "适用场景：Lunar New Year, Festive greetings, Folk tales\n\n# Red Paper-cut — Style Prompt\n\n> Chinese window-flower paper-cuts brought to life: jointed red cut-outs on paper grounds, where the cut *is* the drawing and the holes are where the light gets in.\n> References (grammar only): folk window flowers of Shaanxi and Yuxian (sawtooth, crescent, cloud and swirl cuts, fold-symmetric rosettes, *yin* and *yang* cutting); the 1958–59 Shanghai Animation Film Studio cut-paper shorts (jointed figures, profile acting, paper layers in parallax). Copy no studio character, no named artist's work and no real motif sheet: generate every pattern from code, and never name the references in the film.\n\n## 1. Essence, and what it is not\n\nEvery visible thing is **a piece of paper that was cut with scissors** and laid flat on another sheet. There is no painting, no gradient shading, no outline stroke: detail, volume and expression come only from **what was cut away**. Red paper is the hero material; grounds are paper too (a light paper by day, a deep dyed paper by night). Characters are **jointed cut-outs** (head, torso, upper and lower limbs pinned at rivets) animated in hard 12 fps steps.\n\nNot shadow puppetry: no light behind a screen, no translucent dyed h",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/papercut-red/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "东方传统",
+      "papercut-red",
+      "Lunar New Year",
+      "Festive greetings"
+    ]
+  },
+  {
+    "id": "opuscar-pictogram-motion",
+    "title_zh": "象形运动图形 (Pictogram Motion)",
+    "title_en": "Pictogram Motion",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/pictogram-motion.jpg",
+    "poster_url": "./assets/lemo/pictogram-motion.jpg",
+    "desc": "【图形与排版 · 样片《Left Behind》】一把被落在公交车上的黄伞，晴天里在失物招领的货架上等了一整天，暴雨回来时和另外 312 把一起撑开：物件、交通、天气和标识，都是卡着节拍的几何象形符号。",
+    "recipe": "适用场景：Public services and city stories, Brand and event identity films, Explainers told through signs and objects\n\n# Pictogram Motion — Style Prompt\n\n> A beat-locked film built from three things only: a **square-grid \"core graphic\"** of circles, half-discs and tiny patterned cells whose rows slide past each other; **geometric pictograms** (objects, vehicles, weather, signs, and a disc-headed figure when one is needed) made of round-capped bars, discs and capsules; and **bold bilingual type** that slides up out of masks. Every cut lands on a drum hit.\n> References (grammar only): Otl Aicher's 1972 Munich pictograms (geometric athletes); multi-sport-games \"look of the games\" identity systems (a modular pattern + a colour set used for everything); Swiss sports-broadcast graphics (mono meta text, tick-bar progress). Learn the grammar; never copy any real event's pictograms, emblem, slogan, pattern artwork or colour names, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nEither a **catalogue film**: N items (products, dishes, steps, species…) shown one card at a time, fast, on the beat; or a **story told in pictograms**: one pictogram as the hero (an object, a vehicle, a sign as often as a person), a goal, a turn, an ending, told through the same cards, walls and transitions. Eac",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/pictogram-motion/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "pictogram-motion",
+      "Public services and city stories",
+      "Brand and event identity films"
+    ]
+  },
+  {
+    "id": "opuscar-pixel-rpg",
+    "title_zh": "16-bit 像素 RPG (16-bit Pixel RPG)",
+    "title_en": "16-bit Pixel RPG",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/pixel-rpg.jpg",
+    "poster_url": "./assets/lemo/pixel-rpg.jpg",
+    "desc": "【游戏 · 样片《The Last Save Point》】勇士在最终 Boss 门前存档，存档画面闪回一路冒险。",
+    "recipe": "适用场景：Game trailers, Recaps, Nostalgia\n\n# 16-bit Pixel RPG — Style Prompt\n\n> A short film that looks, sounds and *behaves* like a mid-90s console role-playing game: 320×180 pixels, a limited indexed palette, text boxes that type, menus, save files, chip music with echo.\n> References (grammar only): mid-90s console RPGs as a system of dialog boxes, menus, battles, overworlds and save points; the palette tricks of indexed hardware (palette swaps, fades by steps, cycling); the colour-depth history of consoles (4 shades → 8-bit → 16-bit). Never use existing game names, characters, UI frames, fonts, logos, melodies or sound effects. Learn the grammar, not the assets.\n\n## 1. Essence, and what it is not\n\n- **320×180 native pixels**, scaled ×6 nearest-neighbour to 1080p; everything, text included, lives in the framebuffer.\n- **A limited, indexed palette**; gradients are **ordered dither**, never blends.\n- **Sprites** around 20–34 px tall animating in a handful of frames; faces act in **portraits**.\n- **Story told the way a game tells it**: dialog boxes with portraits, menus, status bars, battle messages, save files, item fanfares.\n- It takes the game's systems seriously as a language for feeling.\n\nNot HD-2D (no depth of field, b",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/pixel-rpg/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "游戏",
+      "pixel-rpg",
+      "Game trailers",
+      "Recaps"
+    ]
+  },
+  {
+    "id": "opuscar-printed-long-take",
+    "title_zh": "印刷长镜头 (Printed Long Take)",
+    "title_en": "Printed Long Take",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/printed-long-take.jpg",
+    "poster_url": "./assets/lemo/printed-long-take.jpg",
+    "desc": "【印刷与版画 · 样片《Thirty-Three Cranes》】刮版画的北海道河谷一镜到底，丹顶鹤从 33 只数回到 1,927 只。",
+    "recipe": "适用场景：Journeys, Wildlife, Landscapes\n\n# Printed Long Take — Style Prompt\n\n> A three-dimensional world rendered as a scratchboard print, ink and paper with one red, crossed by one unbroken camera move. Depth, weather and light are all cut lines; the camera travels through the print instead of the print being turned page by page.\n> References (grammar only): wood engraving and scratchboard illustration (tone made by the width of parallel cuts), Japanese shin-hanga landscapes (layered planes of mountain, forest, water), and the single-take tracking shot of documentary nature films (a move that never cuts). Take the cut line, the layering and the unbroken move; never copy a print, an illustrator's figures or a film's route.\n\n## 1. Essence, and what it is not\n\n- **Only ink, paper and one red.** Every value is either ink or paper; grey exists only as a density of lines. One red is reserved for one small subject. A warm yellow may appear for the sun, a lamp or one material, never as a second accent.\n- **Tone is cut, not shaded.** Shadow sides of hills carry knife lines that run down the fall line; skies are parallel horizontal cuts whose width makes the light; snow is paper with a few drift strokes; water is ink with cut ripp",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/printed-long-take/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "printed-long-take",
+      "Journeys",
+      "Wildlife"
+    ]
+  },
+  {
+    "id": "opuscar-risograph",
+    "title_zh": "Risograph 孔版印刷 (Risograph Print)",
+    "title_en": "Risograph Print",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/risograph.jpg",
+    "poster_url": "./assets/lemo/risograph.jpg",
+    "desc": "【印刷与版画 · 样片《Sunday Ride》】周日早晨骑车穿过城市：面包店、公园、河边，每到一处加一版油墨，最后三版套印。",
+    "recipe": "适用场景：Indie brands, Zines, Lifestyle\n\n# Risograph Print — Style Prompt\n\n> Animation that looks printed, frame by frame, on a stencil duplicator: two or three translucent spot inks overprinted on warm paper, halftone dots, ink grain, and plates that never quite line up.\n> References (grammar only): Tom Haugomat's riso illustrations (colour fields and silhouettes, a small figure in a large world, extra colours made by overprinting); Jacques Tati's *Jour de fête* (comedy staged small in a wide frame, everyday sounds as rhythm); real riso prints (translucent inks, misregistration, pinholes, feed streaks). Copy none of their characters, compositions or palettes.\n\n## 1. Essence, and what it is not\n\nA risograph prints **one colour at a time**: each colour is its own stencil (\"plate\") with its own drum of translucent ink. That one fact makes the look:\n\n- **A tiny palette**: 2–3 spot inks on warm off-white paper.\n- **Overprint mixing**: inks multiply, so two inks make a third colour and all three approach black; a tint of one ink over a solid of another gives the brightest mixes.\n- **Misregistration**: every plate lands a few pixels off; edges show slivers of paper or a coloured halo.\n- **Halftone dots** for mid-tones, each pla",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/risograph/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "risograph",
+      "Indie brands",
+      "Zines"
+    ]
+  },
+  {
+    "id": "opuscar-rubber-hose",
+    "title_zh": "1930s 橡皮管卡通 (1930s Rubber Hose Cartoon)",
+    "title_en": "1930s Rubber Hose Cartoon",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/lemo/rubber-hose.jpg",
+    "poster_url": "./assets/lemo/rubber-hose.jpg",
+    "desc": "【卡通与动画 · 样片《Coffee Cup Chase》】一只咖啡杯满厨房追一块逃跑的方糖。",
+    "recipe": "适用场景：Food & drink, Retro ads, Kids\n\n# 1930s Rubber Hose Cartoon — Style Prompt\n\n> Black-and-white hand-inked cartoons where every object is alive and swings to a hot jazz band.\n> References (grammar only): early Fleischer Studios shorts (c. 1930–33) for \"the whole world dances\", surreal transformation, the bouncing-ball singalong and ink-and-pen framing devices; *Cuphead* for how a modern team finishes the look and scores it with a big band. Never use an existing cartoon character, name or silhouette, and never copy designs, melodies or logos. **Avoid the \"cup-head on a human body with a straw\" design**: if your hero is an object, the *whole object is the body*.\n\n## 1. Essence, and what it is not\n\nHand-inked black-and-white animation from the early sound era: characters with **rubber-hose limbs** (equal-width tubes, no elbows, no knees), **white four-finger gloves**, **pie eyes** (black oval pupils with a wedge cut out), huge round shoes, and bodies that squash and stretch like balloons. The backgrounds are soft grey watercolour paintings; the characters are flat white, grey and ink. Everything (furniture, machines, plants, the walls) **breathes in time with the music**. The film looks like a worn 35 mm print project",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/rubber-hose/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "卡通与动画",
+      "rubber-hose",
+      "Food & drink",
+      "Retro ads"
+    ]
+  },
+  {
+    "id": "opuscar-satellite-briefing",
+    "title_zh": "卫星简报 (Satellite Briefing)",
+    "title_en": "Satellite Briefing",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/satellite-briefing.jpg",
+    "poster_url": "./assets/lemo/satellite-briefing.jpg",
+    "desc": "【实证影像 · 样片《The Map Still Says Sea》】卫星照着地图去找咸海，找到的是沙漠；只有筑了坝的那一块回来了。",
+    "recipe": "适用场景：Climate, News explainers, Geography\n\n# Satellite Briefing — Style Prompt\n\n> Real satellite imagery of a real place, graded down to an analyst's grey, with thin white measurement lines drawn on the ground: a lock-on reticle, outlines, a range line, one reading. One continuous zoom built from stacked imagery plates carries the viewer from orbit to the ground and back, and time can run inside one locked frame.\n> References (grammar only): open-source investigation films that annotate satellite pictures (thin lines on imagery, one claim per screen, measuring as the plot); the Eameses' *Powers of Ten* (one continuous change of scale with a readout); NASA Earth Observatory's *World of Change* (one place, time running). Copy none of their layouts, typefaces, icons or music; never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The ground is a photograph**: real, licence-clean, georeferenced satellite or aerial imagery of the actual place. Nothing on the ground is drawn, stylised or generated.\n- **Two layers, two truths**: the imagery is what the satellite saw; the hairlines are what the analyst measured. Marks are thin, white, sparse, and sit on real coordinates.\n- **The grade moves with the story**: orbit in",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/satellite-briefing/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "satellite-briefing",
+      "Climate",
+      "News explainers"
+    ]
+  },
+  {
+    "id": "opuscar-scifi-toon",
+    "title_zh": "科幻情景喜剧卡通 (Sci-Fi Sitcom Toon)",
+    "title_en": "Sci-Fi Sitcom Toon",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "科普图解 / 手绘水彩",
+    "media_type": "image",
+    "media_url": "./assets/lemo/scifi-toon.jpg",
+    "poster_url": "./assets/lemo/scifi-toon.jpg",
+    "desc": "【卡通与动画 · 样片《Coffee Run》】厌世天才开传送门只想买杯咖啡，却穿过越来越离谱的平行宇宙。",
+    "recipe": "适用场景：Comedy, Tech brands, Social shorts\n\n# Sci-Fi Sitcom Toon — Style Prompt\n\n> Adult-animation sci-fi sitcom: thick boiling outlines, flat colour, a duo whose reactions don't match, a glowing portal, and one palette per world.\n> References (grammar only): adult-swim-era sci-fi sitcom cartoons (dialogue-driven comedy, reaction close-ups, boiling line, sci-fi hardware as household junk). Borrow the *grammar*, never the characters.\n\n## 1. Essence, and what it is not\n\nHand-drawn-looking 2D TV animation for adults: **uniform thick dark outlines that boil**, **flat fills with hard-edged shadow shapes (no gradients)**, **big white eyes with tiny pupils**, **elastic mouths**, grotesque-but-cute creatures, and sci-fi hardware treated like household junk. The comedy is **dialogue-driven**: improvised-feeling talk, interruptions, awkward pauses, reaction shots, escalation, and a last-second reversal. The genre's engine is **a tiny, mundane goal pursued with absurdly large sci-fi means**: whoever could solve anything uses it for something petty, and someone else pays the emotional price.\n\nNot a kids' cartoon (dry humour, long pauses), not anime (no sparkly eyes), not a vector explainer (lines boil).\n\n**Copyright red lines (non-negot",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/scifi-toon/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "卡通与动画",
+      "scifi-toon",
+      "Comedy",
+      "Tech brands"
+    ]
+  },
+  {
+    "id": "opuscar-shadow-puppet",
+    "title_zh": "皮影戏 (Shadow Puppetry)",
+    "title_en": "Shadow Puppetry",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "东方与古典艺术",
+    "media_type": "image",
+    "media_url": "./assets/lemo/shadow-puppet.jpg",
+    "poster_url": "./assets/lemo/shadow-puppet.jpg",
+    "desc": "【东方传统 · 样片《Hou Yi Shoots the Suns》】十日炙烤大地，后羿张弓射日。",
+    "recipe": "适用场景：Myths & folklore, Heritage, Festivals\n\n# Shadow Puppetry — Style Prompt\n\n> Chinese shadow theatre: translucent dyed-hide puppets, carved like lace, pressed against a cotton screen and lit from behind by oil lamps.\n> References (grammar only): Lotte Reiniger's *The Adventures of Prince Achmed* (1926) for profile acting and lace-like scenery; Shaanxi / Huayin shadow theatre for carving, colour and gong-and-drum rhythm. Never reproduce a specific historical puppet, melody or recording, and never name them in the film.\n\n## 1. Essence, and what it is not\n\nA white cloth screen; behind it, flat puppets cut from **translucent dyed hide**, lit by an **oil lamp**. Colour arrives *by transmitted light*: dyes glow like stained glass, carved holes shine brightest, overlaps go darker. Puppets are jointed with **visible thread rivets** and moved by **thin rods** (neck and hands) that show as soft grey lines just off the screen. It is live theatre, not stop-motion: the screen **flickers with the lamp**, puppets **tremble in the hand**, loose parts **swing on their rivets**.\n\nNot a black silhouette film (colour is the second protagonist), not paper-cut (the light comes *through*), not stained glass (no lead lines; pieces move and overla",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/shadow-puppet/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "东方传统",
+      "shadow-puppet",
+      "Myths & folklore",
+      "Heritage"
+    ]
+  },
+  {
+    "id": "opuscar-silent-film",
+    "title_zh": "1920s 默片 (1920s Silent Film)",
+    "title_en": "1920s Silent Film",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "极客 / 像素 / 复古",
+    "media_type": "image",
+    "media_url": "./assets/lemo/silent-film.jpg",
+    "poster_url": "./assets/lemo/silent-film.jpg",
+    "desc": "【电影与时代 · 样片《The Runaway Loaf》】面包店学徒追一个滚走的面包，最后掰成两半分给饿肚子的小女孩。",
+    "recipe": "适用场景：Comedy, Retro brands, Silent storytelling\n\n# 1920s Silent Film — Style Prompt\n\n> An engraved-illustration silent film projected in a picture house: ink line and silver wash, a 4:3 print that flickers and weaves between velvet curtains, intertitles instead of voices, and a cinema pianist who plays every beat.\n> References (grammar only): **Buster Keaton**, *The General* (1926) and *Sherlock Jr.* (1924) — the whole gag in one locked-off wide shot, a deadpan face, a body that does the acting; **Harold Lloyd**, *Safety Last!* (1923) — the near-miss; **Georges Méliès** — the iris and the trick shot; **The Artist** (2011) — how few intertitles a modern audience needs; **1920s photoplay piano cue sheets** — music by mood section, the piano doing the sound effects. Never use the Tramp look (bowler, toothbrush moustache, cane), any real film's gags, or any published melody.\n\n## 1. Essence, and what it is not\n\nA one-reel film as it would look *projected*:\n- **A 4:3 print in a gate between theatre curtains**; the sides of the 16:9 frame are the picture house.\n- **An ink drawing with washed greys and hatching**, printed on silver stock that flickers, weaves, scratches and burns at the edges.\n- **Nobody speaks.** Beats are told by **act",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/silent-film/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "电影与时代",
+      "silent-film",
+      "Comedy",
+      "Retro brands"
+    ]
+  },
+  {
+    "id": "opuscar-silkscreen-poster",
+    "title_zh": "丝印旅行海报 (Silkscreen Travel Poster)",
+    "title_en": "Silkscreen Travel Poster",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/silkscreen-poster.jpg",
+    "poster_url": "./assets/lemo/silkscreen-poster.jpg",
+    "desc": "【印刷与版画 · 样片《The Long Way Home》】一张满屏丝印海报一座城，票根数着离家的公里数，走到世界的另一头，才发现那是回家的路。",
+    "recipe": "适用场景：Destination guides, Tourism, Event posters\n\n# Silkscreen Travel Poster — Style Prompt\n\n> Opaque, hard-edged flat inks pulled one colour at a time through a screen: 4–6 inks per poster, stepped colour bands instead of gradients, thin paper-white gaps where the registration slips. Information is revealed the way the print is made: one layer, one beat.\n> References (grammar only):\n> - **1930s–40s WPA national-park screen prints**: 4–6 flat inks, lit and shade faces, stepped-band skies, a dark information band, concentric sun rings.\n> - **Fifty-Nine Parks (contemporary)**: restraint, paper as a colour, a series on one template with a new palette per poster.\n> - **The physical process**: hinged screen, squeegee pushing an ink bead across mesh, split-fountain pulls, drag streaks, pinholes, off-register slivers.\n>\n> Never copy a real poster's composition, park name, lettering or logo, and never name a real agency.\n\nA **scene style**: it does a practical job (a guide, an event poster, a destination series) for any place, event or product with a few facts. See §11 for the jobs.\n\n## 1. Essence, and what it is not\n\nA poster being **printed on camera**. Every colour is an opaque ink laid by its own pull; later ink covers earlier ink com",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/silkscreen-poster/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "silkscreen-poster",
+      "Destination guides",
+      "Tourism"
+    ]
+  },
+  {
+    "id": "opuscar-spy-titles",
+    "title_zh": "60s 间谍片头 (60s Spy Title Sequence)",
+    "title_en": "60s Spy Title Sequence",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/spy-titles.jpg",
+    "poster_url": "./assets/lemo/spy-titles.jpg",
+    "desc": "【图形与排版 · 样片《The Velvet Cipher》】虚构 1964 年间谍片的片头：追一把被偷的钥匙，几何碎片最后拼成片名。",
+    "recipe": "适用场景：Title sequences, Event openers, Trailers\n\n# 60s Spy Title Sequence — Style Prompt\n\n> A cut-paper, four-ink opening title sequence for a film that never existed: silhouettes move through sets built out of the credits themselves, every brass stab is a cut, and a title is assembled from the pieces.\n> References (grammar only): Saul Bass's titles for *North by Northwest*, *Anatomy of a Murder* and *Vertigo* (flat opaque inks, abstraction down to silhouettes, type as structure); the 2002 homage by Kuntzel + Deygas for *Catch Me If You Can* (a cut-paper chase through graphic sets, lateral tracking). Not a gun-barrel opening, not a tiptoeing cartoon panther, not a copy of any real title's logo, lettering, characters or shots.\n\n## 1. Essence, and what it is not\n\n- **Flat, opaque inks on paper**: four colours, no gradients.\n- **Hand-cut edges** on every shape; pieces layered with cut gaps and small paper shadows.\n- **Abstraction down to silhouettes**: figures in profile, all acting in outline and timing.\n- **Typography is the picture's structure**: credits are architecture, props, vehicles.\n- **Music cuts the picture**: brass stabs are edit points.\n- A title sequence is a story in itself: one goal, a few locations, one reveal.\n\nNot",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/spy-titles/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "spy-titles",
+      "Title sequences",
+      "Event openers"
+    ]
+  },
+  {
+    "id": "opuscar-stained-glass",
+    "title_zh": "彩色玻璃窗 (Stained Glass)",
+    "title_en": "Stained Glass",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/stained-glass.jpg",
+    "poster_url": "./assets/lemo/stained-glass.jpg",
+    "desc": "【图形与排版 · 样片《The Dragon of the East Window》】阳光从清晨移到黄昏，照到哪一格花窗，哪一格的故事就动起来。",
+    "recipe": "适用场景：Legends, Heritage, Holiday stories\n\n# Stained Glass — Style Prompt\n\n> A medieval stained-glass window seen from inside a dark stone hall, alive only where the sun touches it: light is the clock, the camera and the story.\n> References (grammar only): the window prologue of *Beauty and the Beast* (1991) (chapters pane by pane, a storyteller's pace); the glass knight of *Young Sherlock Holmes* (1985) (glass that cracks and recombines piece by piece); 12th–13th-century Chartres glass (colour logic, grisaille, leading). Copy none of their characters, compositions, subjects or music.\n\n## 1. Essence, and what it is not\n\n- **Cut pieces of coloured glass in dark lead cames**, faces and folds **painted in brown grisaille**.\n- Glass has no light of its own: it **glows only when the sun is behind it** and throws a soft coloured copy onto the stone floor; unlit, it is dark and milky.\n- Figures move **piece by piece**, rigid and stepped.\n- The room is always there: stone, a splayed embrasure, iron saddle bars, a floor that catches light.\n- **Secular**: no crosses, saints, halos or other religious imagery; borrow the craft, not the subjects.\n\nNot vector art with black outlines, not a kaleidoscope or Voronoi filter, not Tiffany Art",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/stained-glass/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "stained-glass",
+      "Legends",
+      "Heritage"
+    ]
+  },
+  {
+    "id": "opuscar-swiss-motion",
+    "title_zh": "瑞士动态排版 (Swiss Motion Graphics)",
+    "title_en": "Swiss Motion Graphics",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "图形与排版",
+    "media_type": "image",
+    "media_url": "./assets/lemo/swiss-motion.jpg",
+    "poster_url": "./assets/lemo/swiss-motion.jpg",
+    "desc": "【图形与排版 · 样片《Five Rules for a Poster》】一张音乐会海报按瑞士设计的五条规则自己排版，第五条是只打破一条。",
+    "recipe": "适用场景：Brand identity, Events, Design education\n\n# Swiss Motion Graphics — Style Prompt\n\n> International Typographic Style in motion: a modular grid, one typeface, one signal colour, and movement as exact as a printing press.\n> References (grammar only): 1950s–70s Zurich posters (Müller-Brockmann, Hofmann, Gerstner, Crouwel) for the grid, flush-left type, scale contrast and \"designing programmes\"; modern identity systems in motion (Experimental Jetset, Pentagram) for snaps on the beat. Never copy a specific historical poster's composition (no concentric-circle or fan layouts lifted from Müller-Brockmann), never use Helvetica or Akzidenz font files, never name a real institution on a poster.\n\n## 1. Essence, and what it is not\n\n- **Pure 2D graphic design animated on a grid**: flat paper, black type and bars, a very light grey and **one** saturated signal colour.\n- **Every element snaps to the grid, every move lands on a beat, nothing bounces.**\n- **Rigor with one exception**: the whole frame obeys a system, so the one element that doesn't becomes a character.\n- **Extreme scale contrast**: a giant numeral next to tiny technical notes.\n\nNot a keynote (no gradients, no glow, no device renders), not kinetic typography for a lyric video",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/swiss-motion/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "图形与排版",
+      "swiss-motion",
+      "Brand identity",
+      "Events"
+    ]
+  },
+  {
+    "id": "opuscar-teardown",
+    "title_zh": "产品拆解 (Exploded Teardown)",
+    "title_en": "Exploded Teardown",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/teardown.jpg",
+    "poster_url": "./assets/lemo/teardown.jpg",
+    "desc": "【实证影像 · 样片《21 Keys, Opened》】开源键盘的一半在一次环绕中逐层拆开，看到主控再合拢，标上真实尺寸。",
+    "recipe": "适用场景：Hardware launches, Product pages, Spec explainers\n\n# Exploded Teardown — Style Prompt\n\n> A real product, built from its own engineering files (CAD, PCB layout, bill of materials), lit like a studio packshot and taken apart in front of the camera: the layers lift on one axis, the camera travels between them, every part is named with the numbers its files contain, and it closes again into one object.\n> References (grammar only): hardware-launch exploded films (layer stagger, orbit timing), repair-guide teardowns (opening order, the macro on the part that matters), engineering drawing (leaders, dimension lines). Never copy their products, layouts, typefaces or music, or name them in the film.\n\n## 1. Essence, and what it is not\n\nA frame reads as this style when:\n\n- **the object is real and exact**: geometry, positions and counts come from the product's own files (STEP, KiCad, BOM, assembly guide). Nothing is eyeballed that a file can give;\n- **it is shown apart**: layers float on one axis with even, readable gaps, each still oriented as it sits in the product;\n- **it is photographed, not drawn**: physically based materials, a studio key light, a cool rim, an HDRI reflection, soft contact shadow on an invisible floor;\n- **the numbers li",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/teardown/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "teardown",
+      "Hardware launches",
+      "Product pages"
+    ]
+  },
+  {
+    "id": "opuscar-telestrator",
+    "title_zh": "体育战术板 (Sports Telestrator)",
+    "title_en": "Sports Telestrator",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/telestrator.jpg",
+    "poster_url": "./assets/lemo/telestrator.jpg",
+    "desc": "【剪辑与纪实 · 样片《Freeze Frame》】半场 0–3，费内巴切 12 分钟连进三球：冻住画面、画线、分屏、射门图。",
+    "recipe": "适用场景：Sports analysis, Match recaps, Coaching\n\n# Sports Telestrator — Style Prompt\n\n> The TV football analysis segment: play the clip at full speed, rewind, freeze it, and draw on the broadcast picture — rings under players' feet, marker arrows for the ball, a red patch for the space nobody covered — then play on, switch angles, count the frames, and flatten the pitch into a board. Real match footage is the ground; every line is drawn on top of it and moves with it. A studio show's packaging (sting, corner bug, score bar, a yellow wipe) holds it together. 16:9.\n> References (grammar only): touch-screen analysis segments in televised football (the \"telestrator\" pundit's board), and explainer channels that annotate real match footage. Never copy a broadcaster's or channel's logo, fonts, colours, idents or graphics, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n1. **Watch it, then take it apart.** Every piece of action is seen moving before it is explained. A freeze always follows play; the explanation never comes first.\n2. **One freeze, one finding.** Each freeze says one thing (the ball wasn't cleared; nobody stepped out; he struck it from outside the box) with one label and at most two groups of lines. Th",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/telestrator/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "telestrator",
+      "Sports analysis",
+      "Match recaps"
+    ]
+  },
+  {
+    "id": "opuscar-tilt-shift",
+    "title_zh": "移轴微缩 (Tilt-Shift Miniature)",
+    "title_en": "Tilt-Shift Miniature",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "3D 与等距",
+    "media_type": "image",
+    "media_url": "./assets/lemo/tilt-shift.jpg",
+    "poster_url": "./assets/lemo/tilt-shift.jpg",
+    "desc": "【材质与 3D · 样片《Toy Town Rush Hour》】玩具城的早高峰，一切都像模型。",
+    "recipe": "适用场景：City promos, Real estate, Transport\n\n# Tilt-Shift Miniature — Style Prompt\n\n> A real-looking place photographed from high above with a tilted lens and a time-lapse camera, so the whole world reads as a tabletop model.\n> References (grammar only): Sam O'Hare's *The Sandpit* (2010) and tilt-shift time-lapse photography in general: high vantage points, the blur band, time-lapse rhythm, cloud shadows sweeping over streets. Copy none of its places or music; show no real landmarks, brands or logos.\n\n## 1. Essence, and what it is not\n\nA place seen from high up through a **tilt-shift lens**: only a thin horizontal strip of the frame is sharp, everything above and below melts into blur. The eye reads that as a macro shot of something small, so the world becomes a model. Two more things make the trick work: **saturated, sunny colour** (model-railway paint) and **time-lapse** (vehicles and people move in fast, jittery steps like wind-up toys).\n\nNot a toy or clay render (the world is photoreal, only the lens and the clock make it small), not a game's top-down view (no UI, no clean flat shading), not drone footage (the band, the saturation and the stutter are mandatory).\n\n## 2. Materials & rendering\n\n- **Vantage**: always high. Ob",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/tilt-shift/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "材质与 3D",
+      "tilt-shift",
+      "City promos",
+      "Real estate"
+    ]
+  },
+  {
+    "id": "opuscar-transit-map",
+    "title_zh": "地铁线路图 (Transit Map)",
+    "title_en": "Transit Map",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "产品发布 / 高能快剪",
+    "media_type": "image",
+    "media_url": "./assets/lemo/transit-map.jpg",
+    "poster_url": "./assets/lemo/transit-map.jpg",
+    "desc": "【信息与发布 · 样片《6 Kilometres》】一张纸上的线路图，从 1993 年的 6 公里长到 21 条线、906 公里。",
+    "recipe": "适用场景：Transport, Growth over time, Networks\n\n# Transit Map — Style Prompt\n\n> A metro schematic printed on a physical sheet: lines held to eight directions, white stops, black-outlined interchange capsules, water as a flat blue band. The network is drawn on by glowing pen tips while a real perspective camera moves over the paper: it rides a tip, drops low where a line dives under water, pulls back through levels of detail and sweeps across the densest knot at a low angle with a shallow focus.\n> References (grammar only): the octilinear schematic tradition of metro diagrams (Beck's Underground diagram, Vignelli's New York map), the stamp of a printed cartouche, flatbed and macro photography of maps lying on a table. Copy none of their layouts, typefaces, icons or line bullets; never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **Eight directions only.** Every line segment, river edge and coastline is horizontal, vertical or at 45°; every corner is one fillet radius. A line never wiggles.\n- **Growth is drawing.** A line exists as far as its pen tip has travelled; stops light when the tip passes; an interchange appears only when the second line actually arrives, and it lands with weight.\n- **Ink on a sheet.** The",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/transit-map/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "信息与发布",
+      "transit-map",
+      "Transport",
+      "Growth over time"
+    ]
+  },
+  {
+    "id": "opuscar-ukiyoe",
+    "title_zh": "浮世绘 (Ukiyo-e)",
+    "title_en": "Ukiyo-e",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "东方与古典艺术",
+    "media_type": "image",
+    "media_url": "./assets/lemo/ukiyoe.jpg",
+    "poster_url": "./assets/lemo/ukiyoe.jpg",
+    "desc": "【东方传统 · 样片《Toward the Mountain》】旅人走向远山，每个镜头都是一幅版画；巨浪是高潮，结尾是远山与整幅画轴拉远。",
+    "recipe": "适用场景：Travel, Japanese culture, Poetry\n\n# Ukiyo-e — Style Prompt\n\n> Edo-period woodblock prints brought to life: flat colour blocks, carved ink lines, bokashi skies, paper you can feel, and a camera that moves over the print like an unrolling handscroll.\n> References (grammar only): Hokusai's *Thirty-six Views* (one constant subject placed differently each time; bold geometric cropping); Hiroshige's *Fifty-three Stations* and *Hundred Famous Views* (small figures, rain lines, extreme foreground framing); the anime *Mononoke* (2007) (print texture alive in motion, flat layers sliding, seals as screen language). Never reproduce a specific famous print (no copy of *The Great Wave*, *Red Fuji*, *Sudden Shower over Ōhashi*), and never copy their characters or compositions.\n\n## 1. Essence, and what it is not\n\nEvery shot is **a complete woodblock print**: a sheet of washi, a thin double ink border, flat areas of colour printed from separate blocks, a black key-block line on top, a vertical title cartouche and a red seal. The world is flat on purpose. Depth comes from stacked horizontal layers, mist bands and bold cropping, never from perspective rendering, lighting or shading.\n\nWhat makes it read as *printed* rather than *vecto",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/ukiyoe/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "东方传统",
+      "ukiyoe",
+      "Travel",
+      "Japanese culture"
+    ]
+  },
+  {
+    "id": "opuscar-urban-sketch",
+    "title_zh": "钢笔淡彩 (Urban Sketch · Pen & Wash)",
+    "title_en": "Urban Sketch · Pen & Wash",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/urban-sketch.jpg",
+    "poster_url": "./assets/lemo/urban-sketch.jpg",
+    "desc": "【手绘与绘画 · 样片《Where the Wind Went》】公园只是一张钢笔速写，风把草帽吹到哪里，哪里才有颜色。",
+    "recipe": "适用场景：City & travel, Architecture, Lifestyle brands\n\n# Urban Sketch · Pen & Wash — Style Prompt\n\n> A sketchbook page drawn on location: fine sepia fineliner lines that wobble, overshoot and never quite close, with loose transparent watercolour dropped on top. The colour sits slightly off the lines, spills over them, and dissolves into cream cold-press paper at the page edge.\n> References (grammar only):\n> - Urban-sketching sketchbook pages: line first, then wash; colour off-register; handwritten date and place in the corner; the page edge breaking up into dabs.\n> - *Paperman* (2012): a monochrome world with one coloured object.\n> - *The Red Balloon* (1956): an object as the protagonist, the camera following it across a city.\n> - Jazz waltz (the Vince Guaraldi school): 3/4 swing, walking bass, brushes, a woodwind lead.\n>\n> Nothing is copied from these: no characters, melodies, layouts or type.\n\n## 1. Essence, and what it is not\n\nReportage drawing, made on location in a few minutes. Two layers that stay visibly separate:\n\n1. **Ink.** One thin, near-constant line (a 0.3–0.5 mm fineliner) in dark sepia. It wobbles slightly, overshoots corners by a few pixels, breaks mid-stroke, and suggests rather than describes: a few window marks inste",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/urban-sketch/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "urban-sketch",
+      "City & travel",
+      "Architecture"
+    ]
+  },
+  {
+    "id": "opuscar-visual-investigation",
+    "title_zh": "视觉调查 (Visual Investigation)",
+    "title_en": "Visual Investigation",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/visual-investigation.jpg",
+    "poster_url": "./assets/lemo/visual-investigation.jpg",
+    "desc": "【剪辑与纪实 · 样片《The Hindenburg: Four Minutes, 32 Seconds》】新闻片、照片、证词和调查报告排上同一条时间轴，五路来源指向一处。",
+    "recipe": "适用场景：Reconstructions, Fact-checks, Incident reports\n\n# Visual Investigation — Style Prompt\n\n> A cold investigation desk: footage, photographs, documents, sound and maps from one real event, laid out on one shared clock so they check each other. The clock lives inside the picture — timestamps on the evidence, a playhead on a data chart, a stopwatch over the decisive seconds; frozen frames are circled and magnified; quotes are highlighted on the page they come from; a plan shows where cameras stood and where they looked; what is known and what is not are kept apart; at the end every piece of evidence is pulled into one map.\n> References (grammar only): newspaper visual-investigation videos, forensic-architecture reconstructions, broadcast verification units. Never copy them, quote their names or use their branding.\n\n## 1. Essence, and what it is not\n\n1. **Sources meet at one moment.** The payoff of every section is two or more independent sources (a frame, a photo, a testimony, a report line, a sound) pointing at the same place or the same second. Cut points are sync points.\n2. **One clock, read in the picture.** Time is carried by large readouts that belong to the layout: the timestamp on each telegram card, a playhead with its clock",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/visual-investigation/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "剪辑与纪实",
+      "visual-investigation",
+      "Reconstructions",
+      "Fact-checks"
+    ]
+  },
+  {
+    "id": "opuscar-watercolor",
+    "title_zh": "水彩笔刷 (Watercolor Brush)",
+    "title_en": "Watercolor Brush",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/watercolor.jpg",
+    "poster_url": "./assets/lemo/watercolor.jpg",
+    "desc": "【手绘与绘画 · 样片《Follow the Rain》】跟着降雨从澳洲红色腹地一路画到绿色海岸，一镜到底。",
+    "recipe": "适用场景：Nature documentary, Travel, Science explainers\n\n# Watercolor Brush — Style Prompt\n\n> A hand-painted journal page that paints itself: translucent brush strokes with dry-brush flying white on warm cotton paper, hand-written notes beside what is painted, nothing drawn with a vector line.\n> References (grammar only): naturalist field-journal and botanical-plate watercolours (specimen + note); long horizontal handscroll panoramas (one continuous painted world); the textbook \"transect\" diagram (a gradient read across space). Borrow the grammar, never a specific artwork, character or layout.\n\n## 1. Essence, and what it is not\n\n- **One sheet of warm, fibrous paper** under everything; it is also the eraser (paper-coloured mist washes things away).\n- **Everything is individual brush strokes**: a variable-width ribbon at partial opacity plus a few thin **bristle tracks** that break into dashes (flying white). Strokes overlap and darken where they cross, like transparent pigment. No vector outlines; a darker edge stroke along a form is the only \"line\".\n- **Things paint themselves in**, stroke by stroke, structure before detail (trunk → branches → leaves; outline wash → shadow → accent).\n- **An annotation layer** in a hand the painter would",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/watercolor/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "watercolor",
+      "Nature documentary",
+      "Travel"
+    ]
+  },
+  {
+    "id": "opuscar-white-model",
+    "title_zh": "白模投影 (Projection on White Model)",
+    "title_en": "Projection on White Model",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "商业数据 / 纪实调查",
+    "media_type": "image",
+    "media_url": "./assets/lemo/white-model.jpg",
+    "poster_url": "./assets/lemo/white-model.jpg",
+    "desc": "【实证影像 · 样片《How a Flattened City Grew Back》】投影机把数据一层层刷上鹿特丹白模：从 1940 年的空洞到今天的塔楼。",
+    "recipe": "适用场景：Urban planning, Exhibitions, City data\n\n# Projection on White Model — Style Prompt\n\n> A pure white massing model of a real place stands on a plinth in a dark room, and a projector paints data onto it as light: one layer at a time, falling on the surfaces that face it, spilling a little past the plate. The model never changes; only the light on it does.\n> References (grammar only): projection-mapped planning models in city galleries (the dark room, the soft throw, colour only on white surfaces); macro model photography (shallow focus at rooftop height); editorial data graphics (one figure, one label, one source per layer). Copy none of their layouts, typefaces, colours or music, and never name them in the film.\n\n## 1. Essence, and what it is not\n\n- **The model is real geometry of a real place**: building footprints and heights from open data (§2), extruded at a stated scale (1:1000, 1:2000…). Nothing on the model is invented or \"representative\", and no generated image ever stands in for the place.\n- **The model is white; data is light.** Colour is never painted into the material: it is projected, so it brightens surfaces that face the projector, fades on walls turned away, stops at the edge of the throw and reaches a litt",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/white-model/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "实证影像",
+      "white-model",
+      "Urban planning",
+      "Exhibitions"
+    ]
+  },
+  {
+    "id": "opuscar-whiteboard",
+    "title_zh": "白板讲解 (Whiteboard Explainer)",
+    "title_en": "Whiteboard Explainer",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "手绘与绘画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/whiteboard.jpg",
+    "poster_url": "./assets/lemo/whiteboard.jpg",
+    "desc": "【手绘与绘画 · 样片《Einstein in Your Pocket》】手机怎么知道你在哪：GPS、原子钟，和相对论每天多出的 38 微秒。",
+    "recipe": "适用场景：Explainers, Online courses, Science\n\n# Whiteboard Explainer — Style Prompt\n\n> An explainer drawn live on one glossy dry-erase board: single-line handwriting that is actually *written* stroke by stroke, floating markers with no hand, magnets that can move, an eraser that can rewind, and a camera that travels across the board instead of cutting.\n> References (grammar only): RSA Animate / Cognitive Media (one continuous board, the camera travels instead of cutting, a full-board view); minutephysics (one sentence = one drawing, the simplest geometry that carries the idea); Steve Reich's *Piano Phase* (two copies of one figure at two tempi as a structure). Never copy their drawings, characters, hands or music.\n\nSuits explainers, usually science or \"how does X work\"; the length follows how many ideas the board has to hold.\n\n## 1. Essence, and what it is not\n\n- **One physical whiteboard.** Everything the viewer learns is drawn in dry-erase marker in front of them, in real handwriting order.\n- **The board is a map**: each idea lives in its own region; the camera travels between regions, often led by the pen. Distance on the board = distance in the argument.\n- **Real marker, not animated text**: ink pools where the nib lands,",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/whiteboard/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "手绘与绘画",
+      "whiteboard",
+      "Explainers",
+      "Online courses"
+    ]
+  },
+  {
+    "id": "opuscar-woodcut",
+    "title_zh": "木刻版画 (Woodcut Print)",
+    "title_en": "Woodcut Print",
+    "library": "Lemo-Opuscar 代码电影库 (66款)",
+    "category": "拼贴与版画",
+    "media_type": "image",
+    "media_url": "./assets/lemo/woodcut.jpg",
+    "poster_url": "./assets/lemo/woodcut.jpg",
+    "desc": "【印刷与版画 · 样片《The Bell Founder》】村子用一整个冬天铸一口钟，钟声第一次响起，雪停了。",
+    "recipe": "适用场景：Folk tales, Craft brands, Book trailers\n\n# Woodcut Print — Style Prompt\n\n> A relief print that carves itself: every frame is a black wood block, and light only exists where a knife has cut it away. One colour at most, and only for the thing that burns.\n> References (grammar only): Frans Masereel *Passionate Journey* (1919) and Lynd Ward *Gods' Man* (1929), wordless woodcut novels told as a sequence of self-contained plates; Käthe Kollwitz's woodcuts, where emotion lives in the direction of the gouge; Gustave Doré's engraving, where line spacing and direction build light and volume. Never copy their plates, figures, borders or titles.\n\n## 1. Essence, and what it is not\n\nEach shot is **one printed plate**: black ink on laid paper, framed by a paper margin. It follows three rules of real relief printing:\n\n1. **Black is the wood, white is what the knife removed.** Light is *carved*: a bright area is many wide cuts, a dark area untouched wood.\n2. **Pictures appear by being carved.** Nothing fades in: cuts grow stroke by stroke along the form, coarse gouges first, fine lines after.\n3. **The block is a mirror.** Letters read backwards until the paper is pulled; that reversal is the style's own transition.\n\nNot copperplate engrav",
+    "source_ref": "lemomo-ai/lemo-opuscar/styles/woodcut/STYLE.md",
+    "tags": [
+      "Lemo-Opuscar",
+      "印刷与版画",
+      "woodcut",
+      "Folk tales",
+      "Craft brands"
+    ]
+  }
+]
