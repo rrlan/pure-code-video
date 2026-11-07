@@ -27,7 +27,7 @@ def cmd_doctor(_args):
     core, comm = load_catalog()
     he_tpl = ROOT / "templates/high-energy-html/render.mjs"
     hd_tpl = ROOT / "templates/handdrawn-explainer/handdrawn-leafcutter-21s.mjs"
-    hd_lib = ROOT / "templates/handdrawn-explainer/lib/index.mjs"
+    hd_lib = ROOT / "templates/handdrawn-explainer/lib/pen.mjs"
     if not (he_tpl.is_file() and hd_tpl.is_file() and hd_lib.is_file()):
         raise RuntimeError("缺少核心渲染模板或手绘笔刷库文件")
     info = {
