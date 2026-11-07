@@ -1,9 +1,9 @@
 ---
 name: pure-code-video
-description: Unified pure-code video style picker (530+ styles), director routing table, deterministic 60fps virtual-clock HTML renderer, @napi-rs/canvas hand-drawn watercolour explainer pipeline, bundled 109 CC0 sound-effects pass (-16 LUFS beat-grid mixer), and custom human/cloned voiceover alignment. Zero image-generation models required.
+description: Unified pure-code video style picker (530+ styles), director routing table, deterministic 60fps virtual-clock HTML renderer, @napi-rs/canvas hand-drawn watercolour explainer pipeline, bundled 121 CC0 SFX & BPM/Bit beat loops sound-effects pass (-16 LUFS beat-grid mixer), and custom human/cloned voiceover alignment. Zero image-generation models required.
 ---
 
-# Pure-Code Video (`pure-code-video` v1.1.0)
+# Pure-Code Video (`pure-code-video` v1.2.0)
 
 Use this skill when the user asks to create motion-graphics promos, hand-drawn watercolour explainers, mathematical animations, or Opus 5.5 style pure-code videos **without calling image-generation models**.
 
@@ -24,7 +24,8 @@ Use this skill when the user asks to create motion-graphics promos, hand-drawn w
 - Full rules & cue table: see `references/SOUND-PASS.md`, `references/MUSIC.md`, and `references/SFX-LICENSES.md`.
 - Bundled CC0 SFX library (`sfx/`): 109 real recorded CC0 sound effects across 13 categories (`whoosh`, `click`, `pop`, `riser`, `impact`, `tick`, `ambience`, `ding`, `glitch`, `transition`, `typing`, `ui-blip`).
 - CLI commands:
-  - `python3 run.py sfx-list [--category whoosh]`
+  - `python3 run.py beat-gen --preset 128bpm-launch --seconds 15 --out bgm.wav --grid-out beats.json`
+  - `python3 run.py sfx-list [--category beats|whoosh]`
   - `python3 run.py sound-pass --video silent.mp4 --cues cues.json --music track.mp3 --out out/` (automatically prepares external Python venv with `librosa`, `soundfile`, `scipy`, `matplotlib` and mixes to `-16 LUFS` / true peak `< -4 dBFS`).
 
 ## 4. Custom Voiceover & Voice Cloning Pipelines
