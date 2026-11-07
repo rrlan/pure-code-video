@@ -112,6 +112,11 @@ def cmd_sfx_list(args):
     return 0
 
 
+def cmd_beat_gen(args):
+    cmd = [sys.executable, str(ROOT / "scripts/beat_synth.py"), *args.beat_args]
+    return subprocess.run(cmd).returncode
+
+
 def cmd_sound_pass(args):
     python_bin = ensure_runtime(ROOT)
     manifest_path = str(ROOT / "sfx/manifest.json")
@@ -158,6 +163,8 @@ def main(argv=None):
     p_sfx = sub.add_parser("sfx-list", help="查看内置的 109 个 CC0 实录音效与默认音效包")
     p_sfx.add_argument("--category", help="按分类筛选，如 whoosh / click / pop / riser / impact / tick / glitch")
     p_sfx.add_argument("--limit", type=int, default=30)
+    p_bg = sub.add_parser("beat-gen", help="生成 64/96/110/120/128/140/160 BPM 或 8/16/64-Bit 锁拍律动音轨与节拍时间戳 JSON")
+    p_bg.add_argument("beat_args", nargs=argparse.REMAINDER)
     p_sp = sub.add_parser("sound-pass", help="运行节拍网格检测、CC0 音效挂载与 -16 LUFS 响度对齐混音")
     p_sp.add_argument("sound_pass_args", nargs=argparse.REMAINDER, help="透传给 sound_pass.py 的参数（自动附带 --manifest）")
     p_vt = sub.add_parser("voice-trim", help="真人录音预剪（自动剔除口水词、结巴重说与过长气口）")
@@ -176,6 +183,8 @@ def main(argv=None):
         return cmd_recipe(args)
     if args.cmd == "sfx-list":
         return cmd_sfx_list(args)
+    if args.cmd == "beat-gen":
+        return cmd_beat_gen(args)
     if args.cmd == "sound-pass":
         return cmd_sound_pass(args)
     if args.cmd == "voice-trim":
