@@ -16,6 +16,9 @@ jobs:
       - name: Checkout pure-code-video
         uses: actions/checkout@v4
 
+      - name: Test incremental sync
+        run: python3 -B -m unittest discover -s tests -p 'test_sync_upstream.py' -v
+
       - name: Clone upstream community repositories
         run: |
           git clone --depth 1 https://github.com/HiAPIAI/awesome-opus-5-5-video-styles.git /tmp/opus55
@@ -27,10 +30,10 @@ jobs:
 
       - name: Commit and push if new styles found
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
+          git add recipes/ assets/ index.html
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add recipes/ assets/ index.html
             git commit -m "chore(sync): auto-sync new upstream pure-code video styles"
             git push origin main
           else

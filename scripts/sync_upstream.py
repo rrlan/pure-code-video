@@ -21,6 +21,14 @@ def sync_from_dirs(opus_dir: Path | None, lemo_dir: Path | None) -> int:
     existing_comm_ids = {x["id"] for x in comm_cases}
     added = 0
 
+    # Validate the gallery boundaries before copying assets or changing catalogs.
+    html = idx_path.read_text(encoding="utf-8")
+    s1 = html.find("const CORE_STYLES = ")
+    s2 = html.find(";\nconst COMMUNITY_CASES = ", max(s1, 0))
+    e2 = html.find(";\n\nconst SFX_ITEMS = ", max(s2, 0))
+    if not (0 <= s1 < s2 < e2):
+        raise ValueError("index.html is missing the expected style/case data boundaries")
+
     if lemo_dir and (lemo_dir / "styles").is_dir():
         cat_map = {
             "剪辑与纪实": "商业数据 / 纪实调查",
@@ -104,25 +112,15 @@ def sync_from_dirs(opus_dir: Path | None, lemo_dir: Path | None) -> int:
     if added > 0:
         core_path.write_text(json.dumps(core_styles, ensure_ascii=False, indent=2), encoding="utf-8")
         comm_path.write_text(json.dumps(comm_cases, ensure_ascii=False, indent=2), encoding="utf-8")
-        html = idx_path.read_text(encoding="utf-8")
-        s1 = html.find("const CORE_STYLES = ")
-        e1 = html.find(";
-const COMMUNITY_CASES = ")
-        s2 = html.find("const COMMUNITY_CASES = ")
-        e2 = html.find(";
-
-const SFX_ITEMS = ")
-        if s1 != -1 and e1 != -1 and s2 != -1 and e2 != -1:
-            html = (
-                html[:s1]
-                + "const CORE_STYLES = "
-                + json.dumps(core_styles, ensure_ascii=False)
-                + ";
-const COMMUNITY_CASES = "
-                + json.dumps(comm_cases, ensure_ascii=False)
-                + html[e2:]
-            )
-            idx_path.write_text(html, encoding="utf-8")
+        html = (
+            html[:s1]
+            + "const CORE_STYLES = "
+            + json.dumps(core_styles, ensure_ascii=False)
+            + ";\nconst COMMUNITY_CASES = "
+            + json.dumps(comm_cases, ensure_ascii=False)
+            + html[e2:]
+        )
+        idx_path.write_text(html, encoding="utf-8")
     print(f"Sync complete: {added} new styles/cases added (core={len(core_styles)}, community={len(comm_cases)}).")
     return added
 
